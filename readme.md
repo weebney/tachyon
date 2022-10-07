@@ -11,7 +11,7 @@
 
 📌 Website source can be found in the [docs directory.](https://github.com/weebney/tachyon/tree/main/releases) 
 
-⭐ Star this repository to follow development! [Great features](https://fasterthanlight/#devr) are in the works.
+⭐ Star this repository to follow development! [Great features](https://fasterthanlight.net/#devr) are in the works.
 
 ## Feature Demonstration
 
