@@ -25,17 +25,16 @@
             </div>
             <div class="cbottom">
                 <fieldset class="code">
-                    <legend><a id="cdnjs" class="selected"> cdnjs</a> - <a id="unpkg">unpkg</a> - <a
+                    <legend><a id="cdnjs" hidden> cdnjs</a> <!-- - --> <a id="unpkg" class="selected">unpkg</a> - <a
                             id="jsdelivr">jsdelivr
                         </a></legend>
                     <p id="codep">
-                        <span id="cdnjsSpan" class="show">&lt;script src=&quot;//instant.page/5.1.1&quot;
-                            type=&quot;module&quot;
-                            integrity=&quot;sha384-MWfCL6g1OTGsbSwfuMHc8+8J2u71/LA8dzlIN3ycajckxuZZmF+DNjdm7O6H3PSq&quot;&gt;&lt;/script&gt;</span>
-                        <span id="unpkgSpan">&lt;script src=&quot;//fasyer.agkagaasg/5.1.1&quot; type=&quot;module&quot;
-                            integrity=&quot;sha384-MWfCL6g1OTGsbSwfuMHc8+8J2u71/asgasdgsadgasdgasdg+DNjdm7O6H3PSq&quot;&gt;&lt;/script&gt;</span>
+                        <span id="cdnjsSpan" hidden>
+                            &lt;script src=&quot;https://cdnjs.net/gh/user/repo@version/file&quot; type=&quot;module&quot; integrity=&quot;sha384-MWfCL6g1OTGsbSwfuMHc8+8J2u71/asgasdgsadgasdgasdg+DNjdm7O6H3PSq&quot;&gt;&lt;/script&gt;
+                        </span>
+                        <span id="unpkgSpan" class="show" >&lt;script src=&quot;https://cdn.unpkg.net/gh/user/repo@version/file&quot; type=&quot;module&quot; integrity=&quot;sha384-MWfCL6g1OTGsbSwfuMHc8+8J2u71/asgasdgsadgasdgasdg+DNjdm7O6H3PSq&quot;&gt;&lt;/script&gt;</span>
                         <span
-                            id="jsdelivrSpan">S98123598y108597h1234up59145ouib1p3gb4t8vbasdgb09qhweth9sja-9gjasrgS98123598y108597h1234up59145ouib1p3gb4t8vbasd</span>
+                            id="jsdelivrSpan">&lt;script src=&quot;https://cdn.jsdelivr.net/gh/user/repo@version/file&quot; type=&quot;module&quot; integrity=&quot;sha384-MWfCL6g1OTGsbSwfuMHc8+8J2u71/asgasdgsadgasdgasdg+DNjdm7O6H3PSq&quot;&gt;&lt;/script&gt;</span>
                     </p>
                     <a href="#copied" id="copier">copy</a>
                 </fieldset>
@@ -89,7 +88,7 @@
                         Tachyon can be <a href="https://github.com/weebney/tachyon" target="_blank">downloaded</a> <a
                             href="https://github.com/weebney/tachyon" target="_blank">here</a>
                         for
-                        use without a CDN;<a href="#footnote1" class="smalltext">†</a> it is also <a
+                        use without a CDN; it is also <a
                             href="https://www.npmjs.com/package/tachyon-npm" target="_blank">available</a>
                         <a href="https://www.npmjs.com/package/tachyon-npm" target="_blank">via</a> <a
                             href="https://www.npmjs.com/package/tachyon-npm" target="_blank">npm</a> as <span
@@ -141,13 +140,9 @@
                         <li>Whitelist functionality <i class=" smalltext">indev</i></li>
                         <li>Configurability via <span class="highlight">data-*</span> Attributes <i
                                 class="smalltext">indev</i></li>
-                    </ul>
-                    <p> Please report any bugs or issues you come across in the issue
+                    </ul> <br/>
+                    <p> ⚠<strong> Keep in mind that Tachyon is in active development.</strong><br/>Please report any bugs or issues you come across in the issue
                         tracker in the GitHub repository below.</p>
-
-                    <p> <a href="#using" class="smalltext" id="footnote1">†</a>
-                        Because Tachyon is in active development, it is recommended to use a CDN to ensure you are
-                        always using the latest version.</p>
 
                 </div>
             </div>
