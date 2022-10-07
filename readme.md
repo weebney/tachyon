@@ -1,4 +1,4 @@
-![](https://raw.githubusercontent.com/weebney/tachyon/4c7655e7fa62a08d480d68018482861ef474decf/docs/res/tachyon.svg)
+![](https://raw.githubusercontent.com/weebney/tachyon/main/docs/res/favicon.svg)
 
 # Tachyon
 **Make your site faster than light.**
