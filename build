@@ -14,9 +14,10 @@ mv tachyon-min.js releases/$1/package/tachyon-min.js
 # make package
 echo "Making package"
 cp tachyon.js releases/$1/package/tachyon.js
-cp package.json.template package.json
+cp pkgfiles/package.json.template package.json
 sed -i "s/SEDME/$1/g" package.json
 mv package.json releases/$1/package/package.json
+cp pkgfiles/README releases/$1/package/README
 
 cp LICENSE releases/$1/LICENSE
 cp LICENSE releases/$1/package/LICENSE
