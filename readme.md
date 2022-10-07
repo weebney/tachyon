@@ -20,7 +20,7 @@
 ## Using Tachyon
 The recommended way to use Tachyon can be pulled in with `<script type="module"></script>` via unpkg and jsDelivr. Please [click here](https://fasterthanlight.net/) to find the most recent tags.
 
-Tachyon is also available via npm with `npm install tachyonjs`
+Tachyon is also available [via npm](https://www.npmjs.com/package/tachyonjs) with `npm install tachyonjs`
 
 Tachyon can also be self hosted. If you do this, it's recommended that you use the minified version of Tachyon, found in each [release](https://github.com/weebney/tachyon/tree/main/releases) as tachyon-min.js
 
