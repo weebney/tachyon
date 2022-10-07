@@ -5,7 +5,7 @@
 
 🧰 The source file can be found in the root of the repository as [tachyon.js](https://github.com/weebney/tachyon/blob/main/tachyon.js)
 
-🗃 View all releases in the [releases directory](https://github.com/weebney/tachyon/tree/main/releases) or in [releases.](https://github.com/weebney/tachyon/tree/main/releases)
+🗃 View all releases in the [releases directory](https://github.com/weebney/tachyon/tree/main/releases) or in [releases.](https://github.com/weebney/tachyon/releases)
 
 🌐 **For more info on Tachyon, please visit the main site at [fasterthanlight.net](https://fasterthanlight.net)**
 
