@@ -1,3 +1,4 @@
+// tachyon 0.1.1
 window.onload = function () {
     applyEvents();
     mutationObserver.observe(document.body, {
@@ -8,15 +9,29 @@ window.onload = function () {
     });
 }
 
-function sleep(ms) {
-    return new Promise(resolve => setTimeout(resolve, ms));
+function applyEvents() {
+    document.querySelectorAll('a').forEach(a => {
+        a.addEventListener("mouseover", createPrefetch);
+        a.addEventListener("mouseout", removePrefetch);
+    });
 }
 
+var mutationObserver = new MutationObserver(function (mutations) {
+    mutations.forEach(function () {
+        applyEvents();
+    });
+});
+
+/* function sleep(ms) {
+    return new Promise(resolve => setTimeout(resolve, ms));
+} */
+
 var current = [];
+var link
 
 function createPrefetch() {
     current.push(this.href);
-    sleep(50).then(() => {
+    new Promise(resolve => setTimeout(resolve, 50)).then(() => { // sleep(50).then...
         if (current.includes(this.href)) {
             const link = document.createElement('link');
             link.id = this.href;
@@ -29,21 +44,10 @@ function createPrefetch() {
 
 function removePrefetch() {
     current.pop(this.href);
-    if (document.getElementById(this.href) != null){
-        const link = document.getElementById(this.href);
+    try  {
+        link = document.getElementById(this.href)
         link.remove();
+    } catch {
+        return
     }
-}
-
-var mutationObserver = new MutationObserver(function (mutations) {
-    mutations.forEach(function (mutation) {
-        applyEvents();
-    });
-});
-
-function applyEvents() {
-    document.querySelectorAll('a').forEach(a => {
-        a.addEventListener("mouseover", createPrefetch);
-        a.addEventListener("mouseout", removePrefetch);
-    });
 }
