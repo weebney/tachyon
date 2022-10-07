@@ -1,5 +1,5 @@
 {
-  "name": "tachyon",
+  "name": "tachyonjs",
   "version": "SEDME",
   "description": "Make your site faster than light. Prefetches pages before they are clicked.",
   "main": "tachyon.js",
