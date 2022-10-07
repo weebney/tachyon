@@ -23,6 +23,6 @@ cp LICENSE releases/$1/package/LICENSE
 
 echo "Tarballing"
 cd releases
-tar czf $1/$1.tar.gz $1/*
+tar czf $1/tachyon-$1.tar.gz $1/*
 
 echo "Complete! $1"
