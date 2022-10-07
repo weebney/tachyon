@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tachyon</title>
+    <link rel="stylesheet" href="res/styles.css">
+
+    <link rel="icon" type="image/x-icon" href="res/favicon.svg">
+
+    <script src="res/main.js"></script>
+    <script src="res/tachyon.js" type="module"></script>
+</head>
+
+<body>
+    <div class="hider" id="copied"></div>
+    <div class="container">
+        <div class="center">
+            <div class="ctop">
+                <img id="logo" src="res/tachyon.svg">
+                <h1 id="top">Tachyon</h1>
+                <h2>Make your site faster than light.</h2>
+            </div>
+            <div class="cbottom">
+                <fieldset class="code">
+                    <legend><a id="cdnjs" class="selected"> cdnjs</a> - <a id="unpkg">unpkg</a> - <a
+                            id="jsdelivr">jsdelivr
+                        </a></legend>
+                    <p id="codep">
+                        <span id="cdnjsSpan" class="show">&lt;script src=&quot;//instant.page/5.1.1&quot;
+                            type=&quot;module&quot;
+                            integrity=&quot;sha384-MWfCL6g1OTGsbSwfuMHc8+8J2u71/LA8dzlIN3ycajckxuZZmF+DNjdm7O6H3PSq&quot;&gt;&lt;/script&gt;</span>
+                        <span id="unpkgSpan">&lt;script src=&quot;//fasyer.agkagaasg/5.1.1&quot; type=&quot;module&quot;
+                            integrity=&quot;sha384-MWfCL6g1OTGsbSwfuMHc8+8J2u71/asgasdgsadgasdgasdg+DNjdm7O6H3PSq&quot;&gt;&lt;/script&gt;</span>
+                        <span
+                            id="jsdelivrSpan">S98123598y108597h1234up59145ouib1p3gb4t8vbasdgb09qhweth9sja-9gjasrgS98123598y108597h1234up59145ouib1p3gb4t8vbasd</span>
+                    </p>
+                    <a href="#copied" id="copier">copy</a>
+                </fieldset>
+                <div id="text">
+                    <p>
+                        Tachyon is an 870 byte javascript file that improves the speed and user experience of your
+                        website
+                        by making your links instant.
+                    </p>
+                    <p> Tachyon is a very simple implementation of a <a href="https://archive.ph/q8Mfs"
+                            target="_blank">page</a> <a href="https://archive.ph/q8Mfs" target="_blank">prediction</a>
+                        system. It makes the user's browser download linked content before they even click a link by
+                        taking advantage of the time a user
+                        hesitates before clicking;
+                        when
+                        the user clicks the link, the page is already downloaded and is displayed instantly.</p>
+                    <p><strong> To test if Tachyon would've helped,</strong> <span id="clickMe" class="hover cur">click
+                            me!</span>
+                        <span class="hidden" id="no">No!</span> <span class="hidden" id="yes">Yes!</span>
+                        <span class="hidden smalltext" id="result">(Loaded for <span class="hidden smalltext"
+                                id="timeSpan"></span>)</span><span class="hidden smalltext" id="error">Remove
+                            cursor before trying again.</span>
+
+                    </p>
+                    <p> This
+                        incredibly simple technique
+                        markedly improves the speed of your website, resulting in a better user
+                        experience and potentially even translates to <a href="https://archive.ph/0RPcN"
+                            target="_blank">significantl</a>y <a href="https://archive.ph/0RPcN"
+                            target="_blank">more</a> <a href="https://archive.ph/0RPcN" target="_blank">conversions</a>.
+                    </p>
+
+                    <h3 id="using"> | Using Tachyon</h3>
+
+                    <p>
+                        Deploying Tachyon to your site is extremely easy. <br /> For most people the steps will look
+                        like
+                        this:
+                        <ol> <strong>
+                                <li>Copy one of the <span class="highlight">&lt;script&gt;&lt;/script&gt;</span> tags in
+                                    the
+                                    <a href="#top">section</a> <a href="#top">above</a>.
+                                </li><br />
+                                <li>Add it between your website's <span
+                                        class="highlight">&lt;head&gt;&lt;/head&gt;</span>
+                                    tags.
+                                    <br /><br />
+                                <li>Done! Your website will now feel blazingly fast.</li>
+                            </strong></ol>
+                        In most cases, this is all you need to do to implement Tachyon. For more advanced users,
+                        Tachyon can be <a href="https://github.com/weebney/tachyon" target="_blank">downloaded</a> <a
+                            href="https://github.com/weebney/tachyon" target="_blank">here</a>
+                        for
+                        use without a CDN;<a href="#footnote1" class="smalltext">†</a> it is also <a
+                            href="https://www.npmjs.com/package/tachyon-npm" target="_blank">available</a>
+                        <a href="https://www.npmjs.com/package/tachyon-npm" target="_blank">via</a> <a
+                            href="https://www.npmjs.com/package/tachyon-npm" target="_blank">npm</a> as <span
+                            class="highlight">tachyon-npm</span>.
+
+                    </p>
+
+                    <h3> | Technical Details</h3>
+                    <p> Tachyon uses built-in browser features: it automatically generates <span
+                            class="highlight">&lt;link rel=&quot;prefetch&quot;
+                            href=&quot;<span class="underline">⠀ ⠀</span>&quot;&gt;</span> tags to preload content when
+                        a user hovers their cursor on any
+                        <span class="highlight">&lt;a
+                            href="<span class="underline">⠀ ⠀</span>"&gt;&lt;/a&gt;</span> tag for more
+                        than 50ms. The browser then begins
+                        downloading and
+                        caching the page content of <span class="highlight">href="<span class="underline">⠀
+                                ⠀</span>"</span>, so when
+                        the user clicks through the anchor, the page is already cached and ready to be loaded into the
+                        frame.
+                    </p>
+                    <p>These prefetch requests are given extremely low priority; they will not interfere with the speed
+                        of other requests.</p>
+                    </p>
+                    <p> Tachyon could be considered a light-weight
+                        alternative to projects like <a href="https://archive.ph/mWmJA"
+                            target="_blank">instant.page</a>,
+                        which offer a similar
+                        feature set. At 870 bytes minified, Tachyon
+                        has a major advantage compared to alternatives; <span class="hover">
+                            Tachyon is 4.27x smaller than instant.page</span>, leading to the same performance boost
+                        with
+                        considerably
+                        less overhead. </p>
+                    <p>In order to
+                        achieve this, Tachyon has a slightly reduced scope, with no whitelist feature or
+                        configurability out of the box. Tachyon is only 49 extremely readable lines, though, meaning
+                        extensibility is a breeze. Both of these features are planned, and will be implemented with the
+                        same light-weight philosophy. </p>
+                    <p> Tachyon uses a standard timing of 50ms from initial mouse hover to initializing the prefetch,
+                        though this will be configurable
+                        in the future. This timing is a happy medium between both preserving bandwidth and speed. </p>
+
+
+                    <h4> | Development Roadmap</h4>
+
+                    <ul>
+                        <li><s>Initial</s> <s>Release</s> <i class="smalltext"">0.1.0</i> </li>
+                        <li>Whitelist functionality <i class=" smalltext">indev</i></li>
+                        <li>Configurability via <span class="highlight">data-*</span> Attributes <i
+                                class="smalltext">indev</i></li>
+                    </ul>
+                    <p> Please report any bugs or issues you come across in the issue
+                        tracker in the GitHub repository below.</p>
+
+                    <p> <a href="#using" class="smalltext" id="footnote1">†</a>
+                        Because Tachyon is in active development, it is recommended to use a CDN to ensure you are
+                        always using the latest version.</p>
+
+                </div>
+            </div>
+            <div class="footer">
+
+                <h2 class="foottext"><a class="left" href="https://github.com/weebney/tachyon" target="_blank">git</a>
+                </h2>
+                <h2 class="foottext"><a class="center" target="_blank"
+                        href="https://github.com/weebney/tachyon/issues">bugs</a></h2>
+                <h2 class="foottext"><a class="right" href="https://cassettecowboy.net">dev</a></h2>
+            </div>
+            <div class="footer2">
+                <p style="grid-column:2/3;padding-top:3vh;" class="smalltext">created by weebney, 2022</p>
+            </div>
+        </div>
+    </div>
+    </div>
+
+</body>
+
+</html>

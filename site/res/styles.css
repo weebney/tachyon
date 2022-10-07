@@ -1,0 +1,198 @@
+div.container {
+    display: grid;
+    grid-template-columns: 25% auto 25%;
+    font-family: monospace;
+    font-size: 2.74vh;
+}
+
+.foottext {    font-size: 2.74vh; font-weight: normal;
+}
+
+div.center {
+    padding-top: 10vh;
+    padding-bottom: 10vh;
+    min-height: 75vh;
+    grid-column: 2;
+
+
+    display: grid;
+    grid-template-rows: auto auto auto;
+
+}
+
+.smalltext {
+    font-size: 1.5vh;
+    line-height: 0;
+}
+
+
+#logo {
+    height: 33vh;
+    position: relative;
+}
+
+h1 {
+    font-size: 8vh;
+}
+
+h2 {
+    font-size: 3vh;
+}
+
+
+
+li {
+    transform: translateX(-3ch);
+}
+
+div.ctop {
+    grid-row: 1;
+    text-align: center;
+    align-content: center;
+
+}
+
+div.cbottom {
+    grid-row: 2;
+    padding-top: 2vh;
+}
+
+#text {
+    line-height: 150%;
+}
+
+
+div.footer {
+    padding-top: 3vh;
+    grid-row: 3;
+    text-align: center;
+    align-content: center;
+
+    display: grid;
+    grid-template-columns: 33% auto 33%;
+}
+
+div.footer2 {
+    grid-row: 4;
+    text-align: center;
+    align-content: center;
+    display: grid;
+    grid-template-columns: 33% auto 33%;
+}
+
+.underline {
+    text-decoration: underline;
+}
+
+.code {
+    grid-row: 1;
+    background-color: #f0f0f0;
+    border: #000000 solid 1px;
+    margin-left: 2vh;
+    margin-right: 2vh;
+    font-size: 2vh;
+    text-align: center;
+}
+
+legend {
+    background-color: #000000;
+    cursor: default;
+    color: #ffffff;
+
+}
+
+legend>a {
+    text-decoration: none;
+    color: #ffffff;
+
+}
+
+
+fieldset>p>span {
+    display: none;
+}
+
+.hidden {
+    display: none;
+}
+
+.show {
+    display: block;
+}
+
+#copier {
+    text-align: right;
+}
+
+.highlight {
+    background-color: #f0f0f0;
+    border: #000000 solid 1px;
+    font-weight: bold;
+}
+
+.hover {
+    background-color: #000000;
+    color: #ffffff;
+}
+
+legend>a:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+a.selected {
+    text-decoration: underline;
+}
+
+a.left {
+    grid-column: 1;
+}
+
+a.center {
+    grid-column: 2;
+}
+
+a.right {
+    grid-column: 3;
+}
+
+a {
+    color: #000000;
+}
+
+h3 {
+    background-color: #000000;
+    color: #ffffff;
+
+}
+
+::selection {
+    background: #000000;
+    color: #ffffff;
+}
+
+::-moz-selection {
+    background: #000000;
+    color: #ffffff;
+}
+
+.cur {
+    cursor: help;
+}
+
+.header {
+    width: 100vw;
+    background-color: red;
+    height: 3vh;
+    padding: 0%;
+}
+
+.hider {
+    display: none;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+}
