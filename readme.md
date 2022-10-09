@@ -9,7 +9,7 @@
 
 🌐 **For more info on Tachyon, please visit the main site at [fasterthanlight.net](https://fasterthanlight.net)**
 
-📌 Website source can be found in the [docs directory.](https://github.com/weebney/tachyon/tree/main/releases) 
+📌 Website source can be found in the [docs directory.](https://github.com/weebney/tachyon/tree/main/docs) 
 
 ⭐ Star this repository to follow development! [Great features](https://fasterthanlight.net/#devr) are in the works.
 
