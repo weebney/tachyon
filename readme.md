@@ -34,4 +34,4 @@ To use this script, you must have:
 
 Then run `./build VERSION` where `VERSION` is the version number of the release. Releases are placed in the packages directory in a subdirectory correspondent to their version number.
 
-You can edit the resulting package.json by modifying [package.json.template](https://github.com/weebney/tachyon/blob/main/pkgfiles/package.json.template) in the [pkgfiles directory](https://github.com/weebney/tachyon/tree/main/pkgfiles).
+You can edit the resulting package.json by modifying [package.json.template](https://github.com/weebney/tachyon/blob/main/npmfiles/package.json.template) in the [npmfiles directory](https://github.com/weebney/tachyon/tree/main/npmfiles).
