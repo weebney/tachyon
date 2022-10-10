@@ -18,7 +18,7 @@
 ![](https://raw.githubusercontent.com/weebney/tachyon/main/docs/res/tachyonDemo.gif)
 
 ## Using Tachyon
-The recommended way to use Tachyon can be pulled in with `<script type="module"></script>` via unpkg and jsDelivr. Please [click here](https://fasterthanlight.net/) to find the most recent tags.
+The recommended way to use Tachyon is via a CDN. Tachyon can be pulled in with `<script type="module"></script>` via unpkg and jsDelivr. Please [click here](https://fasterthanlight.net/) to find the most recent tags.
 
 Tachyon is also available [via npm](https://www.npmjs.com/package/tachyonjs) with `npm install tachyonjs`
 
