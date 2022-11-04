@@ -1,5 +1,5 @@
 window.onload = function () {
-    applyEvents();
+    applyEvents(); 
     mutationObserver.observe(document.body, {
         attributes: true,
         childList: true,
@@ -22,7 +22,7 @@ var mutationObserver = new MutationObserver(function (mutations) {
 });
 
 var current = [];
-var link
+var link;
 
 function createPrefetch() {
     current.push(this.href);
