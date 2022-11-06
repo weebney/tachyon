@@ -1,48 +1,43 @@
-window.onload = function () {
-    applyEvents(); 
-    mutationObserver.observe(document.body, {
-        attributes: true,
-        childList: true,
-        subtree: true,
-        attributeFilter: ['href'],
-    });
+window.onload = main;
+
+const activeLinks = [];
+var mouseOver = false;
+
+function main() {
+	document.querySelectorAll('a').forEach(addListeners);
+
+	const mutationObserver = new MutationObserver(mutations => mutations.forEach(mutatedElement => mutatedElement.addedNodes.forEach(addListeners)));
+
+	mutationObserver.observe(document.body, {
+		childList: true,
+		subtree: true
+	});
 }
 
-function applyEvents() {
-    document.querySelectorAll('a').forEach(a => {
-        a.addEventListener("mouseover", createPrefetch);
-        a.addEventListener("mouseout", removePrefetch);
-    });
+function addListeners(element) {
+	if (element.href != '') {
+		element.addEventListener("mouseover", prefetchToggle.bind(element));
+		element.addEventListener("mouseout", prefetchToggle.bind(element));
+	}
 }
 
-var mutationObserver = new MutationObserver(function (mutations) {
-    mutations.forEach(function () {
-        applyEvents();
-    });
-});
-
-var current = [];
-var link;
-
-function createPrefetch() {
-    current.push(this.href);
-    new Promise(resolve => setTimeout(resolve, 50)).then(() => {
-        if (current.includes(this.href)) {
-            const link = document.createElement('link');
-            link.id = this.href;
-            link.href = this.href;
-            link.rel = 'prefetch';
-            document.getElementsByTagName('head')[0].appendChild(link);
-        }
-    });
-}
-
-function removePrefetch() {
-    current.pop(this.href);
-    try  {
-        link = document.getElementById(this.href)
-        link.remove();
-    } catch {
-        return
-    }
+function prefetchToggle() {
+	mouseOver = !mouseOver;
+	const href = this.href;
+	const tagid = "tachyon:" + href;
+	
+	try {
+		document.head.removeChild(document.getElementById(tagid));
+		return
+	} catch {
+		setTimeout(() => {
+			if (mouseOver) {
+				const link = document.createElement('link');
+				link.id = tagid;
+				link.href = href;
+				link.rel = 'prefetch';
+				document.head.appendChild(link);
+			}
+		}, 50);
+	}
 }

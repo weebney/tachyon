@@ -7,12 +7,12 @@ cp tachyon.js releases/$1/tachyon.js
 # minify
 echo "Making tachyon-min.js with uglifyjs"
 touch tachyon-min.js
-uglifyjs tachyon.js > tachyon-min.js
+uglifyjs tachyon.js -c -m --toplevel --module > tachyon-min.js
 cp tachyon-min.js releases/$1/tachyon-min.js
 mv tachyon-min.js releases/$1/package/tachyon-min.js
 
 # make package
-echo "Making package"
+echo "Making npm package"
 cp tachyon.js releases/$1/package/tachyon.js
 cp pkgfiles/package.json.template package.json
 sed -i "s/VERSIONTEXT/$1/g" package.json
@@ -22,7 +22,7 @@ cp pkgfiles/README.md releases/$1/package/README.md
 cp LICENSE releases/$1/LICENSE
 cp LICENSE releases/$1/package/LICENSE
 
-echo "Tarballing"
+echo "Archiving"
 cd releases
 tar czf $1/tachyon-$1.tar.gz $1/*
 
