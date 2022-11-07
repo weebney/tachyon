@@ -1,7 +1,7 @@
 {
   "name": "tachyonjs",
-  "version": "VERSIONTEXT",
-  "description": "Make your site faster than light; page prediction in <1kb unzipped.",
+  "version": "0.2.0",
+  "description": "Make your site faster than light; page prediction in <1kb.",
   "main": "tachyon.js",
   "scripts": {
     "test": "echo \"No test specified.\" && exit 1"
@@ -11,13 +11,16 @@
     "url": "git+https://github.com/weebney/tachyon.git"
   },
   "keywords": [
-    "performance"
+    "performance",
+    "prefetch",
+    "predictive",
+    "lightweight"
   ],
   "author": "weebney",
   "license": "BSD-2-Clause",
   "bugs": {
     "url": "https://github.com/weebney/tachyon/issues"
   },
-  "homepage": "fasterthanlight.net",
+  "homepage": "https://fasterthanlight.net",
   "type": "module"
 }

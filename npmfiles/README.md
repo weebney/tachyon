@@ -1,1 +1,0 @@
-For documentation related to Tachyon, please reference the [github repository](https://github.com/weebney/tachyon) and [website](https://fasterthanlight.net/).
