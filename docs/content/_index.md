@@ -26,8 +26,8 @@ Tachyon is a 685 byte script that improves the user experience of your website b
 
 Tachyon uses browsers' built in features to markedly improve the speed of your website, resulting in a better user experience and potentially even [significantly more conversions](https://archive.ph/0RPcN). 
 
-**To test if Tachyon would've helped,** <button><span id="clickMe">***click
-                            me!***</span>
+<span style="font-size:110%;">**To test if Tachyon would've helped,** <button><span id="clickMe">***click
+                            me!***</span></span>
                         <span class="hidden" id="no">No!</span> <span class="hidden" id="yes">Yes!</span>
                         <span class="hidden" id="result">*(Saved <span class="hidden"
                                 id="timeSpan"></span><span>)*</span><span class="hidden" id="error">Remove
