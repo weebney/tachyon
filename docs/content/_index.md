@@ -31,7 +31,7 @@ Tachyon uses browsers' built in features to markedly improve the speed of your w
                         <span class="hidden" id="no">No!</span> <span class="hidden" id="yes">Yes!</span>
                         <span class="hidden" id="result">*(Saved <span class="hidden"
                                 id="timeSpan"></span><span>)*</span><span class="hidden" id="error">Remove
-                            cursor!</span></button>
+                          cursor!</span></button>
 
 
 ## Using Tachyon
