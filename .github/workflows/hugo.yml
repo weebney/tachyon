@@ -24,6 +24,7 @@ concurrency:
 defaults:
   run:
     shell: bash
+    working-directory: ./docs
 
 jobs:
   # Build job
@@ -33,7 +34,6 @@ jobs:
       HUGO_VERSION: 0.102.3
     steps:
       - name: Install Hugo CLI
-        working-directory: ./docs
         run: |
           wget -O ${{ runner.temp }}/hugo.deb https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_extended_${HUGO_VERSION}_Linux-64bit.deb \
           && sudo dpkg -i ${{ runner.temp }}/hugo.deb
@@ -49,7 +49,6 @@ jobs:
           # For maximum backward compatibility with Hugo modules
           HUGO_ENVIRONMENT: production
           HUGO_ENV: production
-        working-directory: ./docs
         run: |
           cd docs && hugo \
             --minify \
