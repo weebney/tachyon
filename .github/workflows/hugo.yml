@@ -24,7 +24,6 @@ concurrency:
 defaults:
   run:
     working-directory: ./docs
-    shell: bash
 
 jobs:
   # Build job
