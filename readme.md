@@ -16,7 +16,7 @@
 
 ## Feature Demonstration
 
-![](https://raw.githubusercontent.com/weebney/tachyon/main/docs/res/tachyonDemo.gif)
+![](https://github.com/weebney/tachyon/blob/main/docs/public/tachyonDemo.gif?raw=true)
 
 ## Using Tachyon
 
