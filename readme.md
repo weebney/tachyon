@@ -1,5 +1,3 @@
-![](https://raw.githubusercontent.com/weebney/tachyon/main/docs/res/favicon.svg)
-
 # Tachyon
 
 **Make your site faster than light; 5x faster page loads in 685 bytes.**
