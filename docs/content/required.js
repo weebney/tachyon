@@ -73,7 +73,8 @@ window.addEventListener('load', function () {
         copier.innerHTML = "<strong>Copied!</strong>";
         sleep(1000).then(() => {
             copier.innerHTML = "<strong>Click me to copy!</strong>";
-        });     
+        });   
+
 
 }});
 
