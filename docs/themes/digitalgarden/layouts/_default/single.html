@@ -1,0 +1,15 @@
+{{ define "main" }}
+
+<main class="h-screen overflow-y-auto">
+  <div class="px-6 py-20 w-full lg:w-[580px] mx-auto prose dark:prose-invert h-fit prose-img:mx-auto">
+
+    <h1>{{ .Title }}</h1>
+    {{ if .Date }}
+    <p class="text-sm text-slate-500 !mb-8">{{ .Date.Format "January 2, 2006" }}</p>
+    {{ end }}
+
+    {{ .Content }}
+  </div>
+</main>
+
+{{ end }}

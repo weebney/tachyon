@@ -1,7 +1,7 @@
 {
   "name": "tachyonjs",
-  "version": "0.2.0",
-  "description": "Make your site faster than light; page prediction in <1kb.",
+  "version": "0.2.1",
+  "description": "Make your site faster than light; 5x faster page loads in 685 bytes. ",
   "main": "tachyon.js",
   "scripts": {
     "test": "echo \"No test specified.\" && exit 1"
@@ -21,6 +21,5 @@
   "bugs": {
     "url": "https://github.com/weebney/tachyon/issues"
   },
-  "homepage": "https://fasterthanlight.net",
-  "type": "module"
+  "homepage": "https://fasterthanlight.net"
 }

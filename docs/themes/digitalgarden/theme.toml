@@ -1,0 +1,14 @@
+name = "Digital Garden"
+license = "MIT"
+licenselink = "https://github.com/apvarun/digital-garden-hugo-theme/blob/master/LICENSE"
+description = "Build your own personal Digital Garden effortlessly with this Hugo theme"
+homepage = "https://github.com/apvarun/digital-garden-hugo-theme"
+demosite = "https://digital-garden-hugo-theme.vercel.app/"
+tags = ["Hugo", "theme", "digital garden", "blog", "modern", "responsive"]
+features = ["clean", "3 column", "minimal", "digital garden", "mobile", "personal", "responsive", "simple", "tailwind", "blog", "white"]
+min_version = "0.82.1"
+
+[author]
+  name = "Varun A P"
+  homepage = "https://apvarun.com"
+

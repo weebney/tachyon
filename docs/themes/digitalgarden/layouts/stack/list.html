@@ -1,0 +1,39 @@
+{{ define "main" }}
+
+<main class="h-screen overflow-y-auto pb-6">
+  <div class="px-6 pt-20 pb-10 w-full lg:w-[580px] mx-auto prose dark:prose-invert h-fit">
+    <h1 class="!mb-4">{{ .Title }}</h1>
+
+    <p>{{ .Description }}</p>
+  </div>
+
+  <div class="px-6 pb-6 w-full lg:w-[580px] max-w-[65ch] mx-auto flex flex-col gap-5 h-fit">
+    {{ range $index, $stack := .Site.Data.stack }}
+    <a href="{{ .link }}" target="_blank" rel="noopener noreferrer"
+      class="flex items-center gap-2.5 p-4 rounded hover:bg-slate-200 dark:hover:bg-slate-700 group {{ if not (modBool $index 2) }} flex-row-reverse text-right {{ end }}">
+      {{ if .icon }}
+      <img src="{{ .icon }}" alt="{{ .name }}" class="w-20 h-20" />
+      {{ else }}
+      <div
+        class="w-20 h-20 text-7xl uppercase grid place-items-center p-4 rounded bg-slate-500 text-white group-hover:text-slate-200 dark:text-slate-900 dark:group-hover:text-slate-700 font-bold">
+        <span class="mt-2 ml-2">{{ substr .name 0 1 }}</span>
+      </div>
+      {{ end }}
+      <div>
+        <h2 class="text-xl font-semibold">{{ .name }}</h2>
+        {{ if .description }}
+        <p class="text-slate-400 dark:text-slate-500">{{ .description }}</p>
+        {{ end }}
+        {{ if .tag }}
+        <p
+          class="text-slate-500 text-xs mt-1 px-1.5 py-0.5 rounded-full border border-slate-300 dark:border-slate-600 inline-block">
+          #{{
+          .tag }}</p>
+        {{ end }}
+      </div>
+    </a>
+    {{ end }}
+  </div>
+</main>
+
+{{ end }}

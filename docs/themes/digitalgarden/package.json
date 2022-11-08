@@ -1,0 +1,23 @@
+{
+  "name": "digital-garden-theme",
+  "version": "1.0.0",
+  "description": "Build your own personal Digital Garden effortlessly with this Hugo theme",
+  "scripts": {
+    "dev:css": "NODE_ENV=development ./node_modules/tailwindcss/lib/cli.js -i ./themes/digitalgarden/assets/css/tailwind.css -o ./static/css/main.css -w",
+    "build:css": "NODE_ENV=production ./node_modules/tailwindcss/lib/cli.js -i ./themes/digitalgarden/assets/css/tailwind.css -o ./static/css/main.css --minify",
+    "develop": "concurrently  \"npm run dev:css\" \"npm run dev:hugo\"",
+    "dev": "hugo serve",
+    "build": "npm run build:css && hugo --gc --minify"
+  },
+  "keywords": [],
+  "author": "Varun A P",
+  "license": "MIT",
+  "dependencies": {
+    "@tailwindcss/line-clamp": "^0.4.0",
+    "@tailwindcss/typography": "^0.5.4",
+    "tailwindcss": "^3.1.7"
+  },
+  "devDependencies": {
+    "concurrently": "^6.4.0"
+  }
+}

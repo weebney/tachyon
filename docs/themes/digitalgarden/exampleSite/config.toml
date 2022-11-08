@@ -1,0 +1,92 @@
+baseURL = "https://example.org/"
+languageCode = "en-us"
+title = "Personal Digital Garden"
+theme = "digitalgarden"
+
+googleAnalytics = "UA-PROPERTY_ID"
+
+[Params]
+  description = "My Digital Garden on the Internet"
+  images = ['/digital-garden-logo.png']
+  enableSearch = true
+
+[Params.newsletter]
+  title = ""
+  description = "A curated weekly digest once a week to your mailbox"
+  path = "https://www.getrevue.co/profile/username/add_subscriber"
+
+[menu]
+[[menu.main]]
+  name = 'Home'
+  url = '/'
+  weight = 1
+[[menu.main]]
+  name = 'Content'
+  params.header = true
+  weight = 2
+[[menu.main]]
+  name = 'Articles'
+  url = '/articles'
+  weight = 3
+[[menu.main]]
+  name = 'Portfolio'
+  url = '/portfolio'
+  weight = 4
+[[menu.main]]
+  name = 'Stack'
+  url = '/stack'
+  weight = 5
+[[menu.main]]
+  name = 'Links'
+  params.header = true
+  weight = 6
+[[menu.main]]
+  name = 'Polywork'
+  url = 'https://polywork.com'
+  weight = 7
+
+[[menu.social]]
+  name = 'Twitter'
+  url = 'https://twitter.com'
+  weight = 1
+[[menu.social]]
+  name = 'GitHub'
+  url = 'https://github.com'
+  weight = 2
+[[menu.social]]
+  name = 'LinkedIn'
+  url = 'https://linkedin.com'
+  weight = 3
+[[menu.social]]
+  name = 'Instagram'
+  url = 'https://instagram.com'
+  weight = 4
+[[menu.social]]
+  name = 'Dribbble'
+  url = 'https://dribbble.com'
+  weight = 5
+[[menu.social]]
+  name = 'Codepen'
+  url = 'https://codepen.io'
+  weight = 6
+[[menu.social]]
+  name = 'Twitch'
+  url = 'https://twitch.com'
+  weight = 7
+[[menu.social]]
+  name = 'Email'
+  url = 'mailto:user@example.org'
+  weight = 8
+[[menu.social]]
+  name = 'RSS'
+  url = '/articles/index.xml'
+  weight = 9
+
+
+# syntax highlight settings
+[markup]
+  [markup.highlight]
+    style = "dracula"
+  [markup.goldmark.renderer]
+    # Enable to include inline HTML
+    unsafe = true

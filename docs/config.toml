@@ -1,0 +1,22 @@
+baseURL = 'http://fasterthanlight.net/'
+languageCode = 'en-us'
+title = 'Tachyon'
+theme = 'digitalgarden'
+
+[markup.goldmark.renderer]
+unsafe= true
+
+[[menu.social]]
+name = 'GitHub'
+url = 'https://github.com/weebney/tachyon'
+weight = 1
+
+[[menu.social]]
+name = 'npm'
+url = 'https://www.npmjs.com/package/tachyonjs'
+weight = 1
+
+[[menu.social]]
+name = 'Twitter'
+url = 'https://twitter.com/weebney'
+weight = 1
