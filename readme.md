@@ -1,6 +1,6 @@
 # Tachyon
 
-**Make your site faster than light; 2x faster page loads in 685 bytes.**
+**Make your site faster than light; faster page loads in 685 bytes.**
 
 🧰 The source files (original & minified) can be found in the [tachyon](https://github.com/weebney/tachyon/blob/main/tachyon/) directory of the repository.
 
