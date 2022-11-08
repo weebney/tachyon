@@ -4,8 +4,8 @@ date: 2022-11-07T14:15:24-05:00
 draft: false
 ---
 
-<script src="/main.js"></script>
-<script src="/tachyon.js"></script>
+<script src="main.js"></script>
+<script src="tachyon.js"></script>
 
 ![](/tachyon.svg)
 
