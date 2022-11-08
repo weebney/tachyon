@@ -4,6 +4,8 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
+  
+
   <link rel="icon" href="{{ if (isset .Site.Params "favicon") }}{{ .Site.Params.favicon }}{{ else }}/favicon.svg{{ end }}">
 
   <title>
@@ -45,6 +47,9 @@
       crossorigin="anonymous"
       onload="renderMathInElement(document.body);"
     ></script>
+
+    <script src="main.js"></script>
+<script src="tachyon.js"></script>
   {{ end }}
 
   {{ template "_internal/opengraph.html" . }}
