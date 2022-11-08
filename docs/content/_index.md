@@ -71,9 +71,9 @@ Tachyon's repository is available [here](https://github.com/weebney/tachyon).
 
 Tachyon could be considered an alternative to projects like [instant.page](https://archive.ph/mWmJA), which offer a similar feature set. That being said, Tachyon has some serious advantages compared to other similar projects.
 
-To get an idea at a glance, **Tachyon improves your website's speed up to 5x more and is 4.3x smaller compared to instant.page**.
+To get an idea at a glance, **Tachyon improves your website's speed significantly more than instant.page yet is 4.1x smaller**.
 
-Tachyon is built with the principle of simplicity at its core- it's a spiritual successor to instant.page with the goal of achieving the same results with a smaller footprint and more legible, robust code.
+Tachyon's code is incredibly simple yet robust, leading to its small size and ease of maintenance and extensibility. It is also extremely easy to set up, and can be fully configured and deployed in one minute or less with virtually no impact on bundle size. Other alternatives may have these traits, but none have all of them or implement them in a robust way- this was the sole objective of Tachyon's development.
 
 ### Advanced Configuration
 
