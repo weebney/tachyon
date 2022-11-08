@@ -32,7 +32,11 @@ window.addEventListener('load', function () {
             var time = endDate - startDate;
             resultSpan.classList.remove("hidden");
             timeSpan.classList.remove("hidden");
+            if (time - 50 >= 1000) {
+                timeSpan.innerText = ((time - 50) / 1000 ).toString() + "s";
+            } else {
             timeSpan.innerText = (time - 50).toString() + "ms";
+            }
             if (time < 50) {
                 noSpan.classList.remove("hidden");
             } else {
