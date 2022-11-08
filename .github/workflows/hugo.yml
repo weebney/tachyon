@@ -44,9 +44,6 @@ jobs:
         id: pages
         uses: actions/configure-pages@v2
       - name: Build with Hugo
-        defaults:
-          run:
-            working-directory: docs
         env:
           # For maximum backward compatibility with Hugo modules
           HUGO_ENVIRONMENT: production
