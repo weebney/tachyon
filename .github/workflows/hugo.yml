@@ -23,7 +23,8 @@ concurrency:
 # Default to bash
 defaults:
   run:
-    working-directory: ./docs
+    shell: bash
+    working-directory: docs
 
 jobs:
   # Build job
