@@ -1,0 +1,29 @@
+{{ define "main" }}
+
+{{ $permalink := .RelPermalink }}
+{{$Section := .Site.GetPage "section" .Section }}
+
+<div class="flex max-h-screen relative overflow-y-auto h-full">
+  
+  <article class="px-6 py-20 w-full mx-auto prose lg:prose-lg dark:prose-invert h-fit prose-img:mx-auto">
+    
+    <a href="{{ $Section.Permalink }}" class="!no-underline !text-slate-500 !mb-2 !inline-block !font-normal !text-sm hover:!text-slate-700 dark:hover:!text-slate-400">← Back to list</a>
+
+    {{ $title := .Params.title }}
+    <h1 class="!mb-2">{{ $title }}</h1>
+    {{ if .Date }}
+    <p class="text-sm text-slate-500 !mb-8">{{ .Date.Format "January 2, 2006" }}</p>
+    {{ end }}
+
+    {{ with .Params.images }}
+    {{- range first 1 . }}
+    <img class="rounded max-w-full w-full mb-4" src="{{ . }}" alt="{{ $title }}" />
+    {{ end -}}
+    {{ end }}
+
+    {{ .Content }}
+  </article>
+
+</div>
+
+{{ end }}

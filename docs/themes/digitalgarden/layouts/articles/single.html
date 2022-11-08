@@ -1,0 +1,66 @@
+{{ define "main" }}
+
+{{ $permalink := .RelPermalink }}
+{{ $date := .Date.Format "January 2, 2006" }}
+{{ $lastmod := .Lastmod.Format "January 2, 2006" }}
+
+<div class="flex h-screen relative">
+
+  <section
+    class="will-change-transform transform transition-transform -translate-x-[200%] absolute top-0 left-0 lg:relative
+  lg:translate-x-0 lg:min-w-[400px] lg:w-1/4 h-full bg-slate-50 dark:bg-slate-800 border-r border-slate-200 dark:border-slate-700 lg:flex flex-col py-3 overflow-y-auto scroll-area">
+    {{$Section := .Site.GetPage "section" .Section }}
+    {{ with $Section }}
+    <a href="{{ .Permalink }}">
+      <h2 class="font-bold mb-5 py-1 pl-12 pr-3 md:px-3">{{ .Title }}</h2>
+    </a>
+    {{- partial "search.html" . -}}
+    <div class="space-y-2.5">
+      {{ range .Data.Pages -}}
+      {{ $isCurrentPage := eq .RelPermalink $permalink }}
+      <a class="article block px-3 py-4 {{ if $isCurrentPage }} bg-slate-900 dark:bg-slate-700 text-slate-50 {{ else }} hover:bg-slate-200 dark:hover:bg-slate-700 {{ end }}"
+        href="{{ .RelPermalink }}">
+        {{ $title := .Params.title }}
+        {{ with .Params.images }}
+        {{- range first 1 . }}
+        <img class="rounded max-w-full mb-4" src="{{ . }}" alt="{{ $title }}" />
+        {{ end -}}
+        {{ end }}
+        <h3 class="text-lg font-semibold mb-0.5">{{ $title }}</h3>
+        <div
+          class="text-sm {{ if $isCurrentPage }} text-slate-400 {{ else }} text-slate-500 dark:text-slate-400 {{ end }} line-clamp-2">
+          {{ .Summary }}
+        </div>
+      </a>
+      {{ end -}}
+    </div>
+    {{ end -}}
+  </section>
+
+  <div class="overflow-y-auto h-screen w-full">
+    <article class="px-6 py-20 w-full mx-auto prose lg:prose-lg h-fit dark:prose-invert prose-img:mx-auto">
+
+      {{ $title := .Params.title }}
+      <h1 class="!mb-2">{{ $title }}</h1>
+
+	  {{ if .Date }}
+      <p class="text-sm text-slate-500 !mb-8"> Planted {{ $date }}
+		{{ if ne $lastmod $date}}
+			<br/> Pruned {{ .Lastmod.Format "January 2, 2006" }}
+        {{ end }}
+	  </p>
+      {{ end }}
+
+      {{ with .Params.images }}
+      {{- range first 1 . }}
+      <img class="rounded max-w-full mx-auto mb-4" src="{{ . }}" alt="{{ $title }}" />
+      {{ end -}}
+      {{ end }}
+
+      {{ .Content }}
+    </article>
+  </div>
+
+</div>
+
+{{ end }}

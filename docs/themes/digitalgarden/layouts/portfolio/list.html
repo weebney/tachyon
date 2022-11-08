@@ -1,0 +1,39 @@
+{{ define "main" }}
+
+{{ $description := .Description }}
+
+<main class="h-screen overflow-y-auto">
+  <section class="w-full md:max-w-xl xl:max-w-4xl 2xl:max-w-7xl mx-auto flex flex-col px-6 py-20">
+    <a href="{{ .Permalink }}" class="inline-block">
+      <h2 class="font-bold text-4xl lg:text-6xl py-1 px-3 mb-4 inline-block">{{ .Title }}</h2>
+    </a>
+    <div class="space-y-2.5 grid grid-cols-1 lg:grid-cols-2 gap-2 lg:gap-4">
+      {{ range $index, $page := .Data.Pages -}}
+      <a class="block px-3 py-4 row-span-2" href="{{ .RelPermalink }}">
+        {{ $title := .Params.title }}
+
+        {{ with .Params.images }}
+        {{- range first 1 . }}
+        <img class="rounded max-w-full w-full mb-4" src="{{ . }}" alt="{{ $title }}" />
+        {{ end -}}
+        {{ end }}
+        <h3 class="text-lg font-semibold mb-0.5 lg:text-xl 2xl:text-3xl">{{ $title }}</h3>
+        {{ with .Description }}
+        <div class="text-sm text-slate-500 dark:text-slate-400 line-clamp-2">
+          {{ . }}
+        </div>
+        {{ end }}
+        <p
+          class="underline decoration-slate-500 text-slate-500 underline-offset-8 font-medium mt-2 hover:text-slate-800 hover:decoration-slate-800 dark:hover:text-slate-400 dark:hover:decoration-slate-400">
+          View Project →</p>
+      </a>
+      {{ if and (eq $index 0) $description }}
+      <h3 class="ml-3 py-8 lg:py-0 lg:mx-2 text-2xl lg:text-5xl font-bold lg:font-medium !leading-tight content-center">
+        {{ $description }}</h3>
+      {{ end }}
+      {{ end -}}
+    </div>
+  </section>
+</main>
+
+{{ end }}

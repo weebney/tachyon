@@ -2,7 +2,7 @@
 
 # Tachyon
 
-**Make your site faster than light; page prediction in <1kb.**
+**Make your site faster than light; 5x faster page loads in 685 bytes.**
 
 🧰 The source files (original & minified) can be found in the [tachyon](https://github.com/weebney/tachyon/blob/main/tachyon/) directory of the repository.
 
@@ -12,7 +12,7 @@
 
 📌 Website source can be found in the [docs directory.](https://github.com/weebney/tachyon/tree/main/docs) 
 
-***⭐ Star this repository to follow development! [Great features](https://fasterthanlight.net/#devr) are in the works.***
+***⭐ Star this repository to follow development! New features are in the works!***
 
 ## Feature Demonstration
 
@@ -24,4 +24,4 @@ The recommended way to use Tachyon is via a CDN. Tachyon can be pulled in with `
 
 ### Configuration
 
-As of 0.2.0, Tachyon implements whitelisting and configurable timing via `data-*` attributes. For more information on how to use these, check out [this page](https://fasterthanlight.net/#config).
+As of 0.2.0, Tachyon implements whitelisting and configurable timing via `data-*` attributes. For more information on how to use these, check out [this page](https://fasterthanlight.net/#advanced-configuration).

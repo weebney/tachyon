@@ -1,0 +1,36 @@
+{{ define "main" }}
+
+<div class="flex h-screen relative">
+
+  <section
+    class="w-full h-full md:min-w-[400px] md:w-1/4 bg-slate-50 dark:bg-slate-800 border-r border-slate-200 dark:border-slate-700 flex flex-col py-3 overflow-y-auto scroll-area">
+    <a href="{{ .Permalink }}">
+      <h2 class="font-bold mb-5 py-1 pl-12 pr-3 md:px-3">{{ .Title }}</h2>
+    </a>
+    {{- partial "search.html" . -}}
+    <div class="space-y-2.5">
+      {{ range .Data.Pages -}}
+      <a class="article block px-3 py-4 hover:bg-slate-200 dark:hover:bg-slate-700" href="{{ .RelPermalink }}">
+
+        {{ $title := .Params.title }}
+        {{ with .Params.images }}
+        {{- range first 1 . }}
+        <img class="rounded max-w-full mb-4" src="{{ . }}" alt="{{ $title }}" />
+        {{ end -}}
+        {{ end }}
+        <h3 class="text-lg font-semibold mb-0.5">{{ $title }}</h3>
+        <div class="text-sm text-slate-500 dark:text-slate-400 line-clamp-2">
+          {{ .Summary }}
+        </div>
+      </a>
+      {{ end -}}
+    </div>
+  </section>
+
+  <main class="hidden md:grid h-screen place-items-center flex-1">
+    <p class="text-center p-8 text-2xl text-slate-300 dark:text-slate-700">Select a post to read</p>
+  </main>
+
+</div>
+
+{{ end }}

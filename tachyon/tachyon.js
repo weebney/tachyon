@@ -1,6 +1,6 @@
-// tachyon.js 0.2.0 - @weebney - BSD-2-Clause
+// tachyon.js 0.2.2 - @weebney - BSD-2-Clause
 const dataAttr = document.currentScript.dataset;
-const whitelist = dataAttr.whitelist || null;
+const whitelist = dataAttr.whitelist || false;
 const waitTime = dataAttr.timer || 50;
 let mouseOver = false;
 
@@ -26,14 +26,19 @@ function prefetchToggle() {
 }
 
 function addListeners(element) {
+  if (!element.href) {
+    return;
+  }
+
   function apply() {
     element.addEventListener('mouseover', prefetchToggle.bind(element));
     element.addEventListener('mouseout', prefetchToggle.bind(element));
   }
 
-  if (!whitelist && element.href) {
+  const onList = typeof element.dataset.tachyon !== 'undefined';
+  if (!whitelist && !onList) {
     apply();
-  } else if (typeof element.dataset.tachyon !== 'undefined') {
+  } else if (whitelist && onList) {
     apply();
   }
 }
