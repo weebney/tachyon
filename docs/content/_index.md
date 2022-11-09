@@ -34,7 +34,7 @@ On average, Tachyon could benefit your site with:
 
 </div>
 
-Tachyon uses browsers' built in features to markedly improve the speed of your website, resulting in a better user experience and potentially even [significantly more conversions](https://archive.ph/0RPcN). 
+Tachyon uses browsers' built in features to markedly improve the speed of your website, resulting in a better user experience and potentially even significantly more conversions.[^5]
 
 <span style="font-size:110%;"><span style="">**To test if Tachyon would've helped</span>,** <button id="confetti"><span id="clickMe" style="font-weight:bold;">click
                             me!</span></button></span>
@@ -43,6 +43,7 @@ Tachyon uses browsers' built in features to markedly improve the speed of your w
                                 id="timeSpan"></span><span>)*</span><span class="hidden" id="error">Remove
                           cursor!</span>
 
+In the above demo, "saved" refers to additional time that would have been spent loading the page without Tachyon. Each second saved could correspond to a 4.42% increase in conversion rate, a 16% increase in customer satisfaction, and an 11% increase in page views. [^2] [^3] Candidly, it's extremely unlikely that you will see a jump in conversion rate this large, but the core idea of reducing page load times to move the needle on business metrics is sound and has been proven many times.[^2] [^3] [^4] [^6] [^7] [^8] [^9] Tachyon was purpose-built for this reason. 
 
 ## Using Tachyon
 
@@ -64,7 +65,7 @@ For most people the steps will look like this:
 
 3. That's it! Your website will now feel **blazingly fast 🔥🔥**
 
-For more advanced users, Tachyon can be downloaded [here](https://github.com/weebney/tachyon) for use without a CDN; it is also available via [npm](https://www.npmjs.com/package/tachyonjs) as tachyonjs. 
+For more advanced users, Tachyon can be downloaded [via GitHub](https://github.com/weebney/tachyon) for use without a CDN; it is also available via [npm](https://www.npmjs.com/package/tachyonjs) as tachyonjs. 
 
 ## Technical Details
 
@@ -74,7 +75,7 @@ These prefetch requests are given [extremely low priority](https://archive.ph/fL
 
 If you're worried about Tachyon using up your bandwidth, fear not- Tachyon only prefetches pages that the user is likely to visit, and only prefetches them once. If you still have concerns, you can look into adjusting tachyon's timings or enabling the whitelist, with instructions in the [advanced configuration](#advanced-configuration) section below.
 
-Tachyon's repository is available [here](https://github.com/weebney/tachyon). It is free-and-open-source software, licensed under the [2-Clause BSD License](https://raw.githubusercontent.com/weebney/tachyon/main/LICENSE).
+Tachyon's is free-and-open-source software (source available on [GitHub](https://github.com/weebney/tachyon)), licensed under the [2-Clause BSD License](https://raw.githubusercontent.com/weebney/tachyon/main/LICENSE).
 
 ### Security & CDN
 
@@ -111,11 +112,9 @@ If whitelist mode is disabled, Tachyon will use the opposite behavior. It will r
 Many privacy and ad-blocking extensions, disable the functionality that Tachyon relies on. Please keep this in mind as you test your site's implementation of the script.
 
 #### Firefox Support
-
 Prefetching is supported but incorrectly implemented in Firefox- it will only work as intended if the prefetched page is fully downloaded and cached. This is a known issue (and has been for years) that will likely be fixed in a future release of Firefox; the issue had its severity updated as recently as October 2022. 
 
 #### Safari Support
-
 Prefetching is currently disabled by default in Safari. It is unclear if this behavior will change in the future.
 
 #### ⚠ Tachyon is in active development.
@@ -124,8 +123,18 @@ Please report any bugs or issues you come across in the [issue tracker](https://
 
 [^1]: Ellis, C. (2022, June 27). Website Loading Time Statistics (2022) - 4 billion web visits analyzed. Tooltester. https://www.tooltester.com/en/blog/website-loading-time-statistics/
     
-[^2]: Weigand, M. (2019, August 20). Site Speed is (Still) Impacting Your Conversion Rate. Portent. https://www.portent.com/blog/analytics/research-site-speed-hurting-everyones-revenue.htm
+[^2]: Zuzana Padychova. (2017, April 7). How Page Load Time Affects Conversion Rates: 12 Case Studies [Infographic]. Hubspot.com. https://blog.hubspot.com/marketing/page-load-time-conversion-rates
 
 [^3]: Dooley, R. (2012, December 4). Don’t Let a Slow Website Kill Your Bottom Line. Forbes. https://www.forbes.com/sites/rogerdooley/2012/12/04/fast-sites/?sh=322ea4dd53cf
 ‌
 [^4]: Teague, J. (2021, December 1). The 2021 Web Almanac: Page Weight (B. Pollard, Ed.). Web Almanac by HTTP Archive. https://almanac.httparchive.org/en/2021/page-weight
+
+[^5]: How Website Performance Affects Conversion Rates | Cloudflare. (n.d.). Cloudflare. Retrieved November 9, 2022, from https://www.cloudflare.com/learning/performance/more/website-performance-conversion-rates/
+‌
+[^6]: The State of Online Retail Performance. (2017). Akamai. https://s3.amazonaws.com/sofist-marketing/State+of+Online+Retail+Performance+Spring+2017+-+Akamai+and+SOASTA+2017.pdf
+
+[^7]: Milliseconds Make Millions. (2020). In Think with Google. Deloitte Digital. https://www.thinkwithgoogle.com/_qs/documents/9382/Milliseconds_Make_Millions_report.pdf
+‌
+[^8]: Jeffers, J. (2019, August 20). Site Speed is (Still) Impacting Your Conversion Rate. Portent. https://www.portent.com/blog/analytics/research-site-speed-hurting-everyones-revenue.htm
+
+[^9]: Breibon, A. (2018, June 27). How Does Page Speed Really Affect your Conversions? AB Tasty. https://www.abtasty.com/blog/page-speed-conversions/
