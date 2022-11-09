@@ -4,7 +4,7 @@ date: 2022-11-07T14:15:24-05:00
 draft: false
 ---
 <script src="required.js"></script>
-<script src="https://unpkg.com/tachyonjs@0.2.1/tachyon-min.js" integrity="sha384-IE6iBy2sYJkfNOmq6qCwTD+E4W7MntLKEGZ7ns6MbgNftCh2WRaSq3O5v9xCvNa1" crossorigin></script>
+<script src="https://unpkg.com/tachyonjs@latest/tachyon-min.js" integrity="sha384-IE6iBy2sYJkfNOmq6qCwTD+E4W7MntLKEGZ7ns6MbgNftCh2WRaSq3O5v9xCvNa1" crossorigin defer></script>
 
    <link rel="stylesheet" href="wave.css">
 
@@ -46,8 +46,7 @@ Tachyon uses browsers' built in features to markedly improve the speed of your w
 
 ## Using Tachyon
 
-
-<span id="copyText">`<script src="https://unpkg.com/tachyonjs@0.2.1/tachyon-min.js" integrity="sha384-IE6iBy2sYJkfNOmq6qCwTD+E4W7MntLKEGZ7ns6MbgNftCh2WRaSq3O5v9xCvNa1" crossorigin></script>`</span>
+<span id="copyText">`<script src="https://unpkg.com/tachyonjs@0.2.2/tachyon-min.js" integrity="sha384-IE6iBy2sYJkfNOmq6qCwTD+E4W7MntLKEGZ7ns6MbgNftCh2WRaSq3O5v9xCvNa1" crossorigin defer></script>`</span>
 
 <div style="text-align:right;">
 <button id="copier">

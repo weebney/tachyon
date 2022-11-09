@@ -2,7 +2,7 @@
   "name": "tachyonjs",
   "version": "0.2.2",
   "description": "Make your site faster than light; faster page loads in 685 bytes.",
-  "main": "tachyon.js",
+  "main": "tachyon-min.js",
   "scripts": {
     "test": "echo \"No test specified.\" && exit 1"
   },
@@ -16,6 +16,12 @@
     "predictive",
     "lightweight",
     "blazingly-fast"
+  ],
+  "files": [
+    "tachyon-min.js",
+    "tachyon.js",
+    "readme.md",
+    "LICENSE"
   ],
   "author": "weebney",
   "license": "BSD-2-Clause",
