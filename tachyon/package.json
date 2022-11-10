@@ -11,13 +11,23 @@
     "url": "git+https://github.com/weebney/tachyon.git"
   },
   "keywords": [
+    "blazingly-fast",
     "performance",
     "prefetch",
     "predictive",
     "lightweight"
+<<<<<<< Updated upstream
+=======
+  ],
+  "files": [
+    "tachyon-min.js",
+    "tachyon.js",
+    "readme.md",
+    "LICENSE"
+>>>>>>> Stashed changes
   ],
   "author": "weebney",
-  "license": "BSD-2-Clause",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/weebney/tachyon/issues"
   },

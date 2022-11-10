@@ -48,7 +48,7 @@ Tachyon uses browsers' built in features to markedly improve the speed of your w
 Deploying Tachyon to your site is extremely easy.
 For most people the steps will look like this:
 
-1. Copy the `<script>` tag above.
+1. Copy the `<script>` tags above.
 
 2. Add it between your website's `<head></head>` tags.
 

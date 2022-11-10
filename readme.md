@@ -20,8 +20,8 @@
 
 ## Using Tachyon
 
-The recommended way to use Tachyon is via a CDN. Tachyon can be pulled in with `<script type="module">` via unpkg and jsDelivr. Please [click here](https://fasterthanlight.net/) to find the most recent tags. Tachyon is also available [via npm](https://www.npmjs.com/package/tachyonjs) with `npm install tachyonjs`
+The recommended way to use Tachyon is via a CDN. Tachyon can be pulled in with `<script>` tags via unpkg and jsDelivr. Please [click here](https://fasterthanlight.net/) to find the most recent tags. Tachyon is also available [via npm](https://www.npmjs.com/package/tachyonjs) with `npm install tachyonjs`
 
 ### Configuration
 
-As of 0.2.0, Tachyon implements whitelisting and configurable timing via `data-*` attributes. For more information on how to use these, check out [this page](https://fasterthanlight.net/#advanced-configuration).
+As of 0.2.0, Tachyon implements whitelisting and configurable timing via `data-*` attributes. For more information on how to use these, check out the [advanced configuration](https://fasterthanlight.net/#advanced-configuration) section of the website.
