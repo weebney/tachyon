@@ -38,7 +38,7 @@ window.addEventListener('load', function () {
             if (time < 50) {
                 if (onTouchDevice) {
                     errorSpan.classList.remove("hidden");
-                    errorSpan.innerText = "Tap again; switching to Touch Mode)";
+                    errorSpan.innerText = "Tap again";
                     return;
                 }
                 noSpan.classList.remove("hidden");
@@ -59,11 +59,19 @@ window.addEventListener('load', function () {
         timeSpan.innerText = "";
     }
 
-    clickMe.addEventListener("mouseover", startTimer);
-    clickMe.addEventListener("mouseout", removeText);
-    clickMe.addEventListener("touchstart", startTimer);
-    clickMe.addEventListener("touchend", removeText);
-    clickMe.addEventListener("click", endTimer);
+    function addListener() {
+        clickMe.addEventListener("click", endTimer);
+
+        if (onTouchDevice) {
+            clickMe.addEventListener("touchstart", startTimer);
+            clickMe.addEventListener("touchend", removeText);
+            return;
+        }
+        clickMe.addEventListener("mouseover", startTimer);
+        clickMe.addEventListener("mouseout", removeText);
+
+    }
+
 
     function sleep(ms) {
         return new Promise(resolve => setTimeout(resolve, ms));
