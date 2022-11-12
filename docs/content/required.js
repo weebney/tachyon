@@ -1,15 +1,17 @@
 window.addEventListener('load', function () {
-    var yesSpan = document.getElementById("yes");
-    var noSpan = document.getElementById("no");
-    var resultSpan = document.getElementById("result");
-    var timeSpan = document.getElementById("timeSpan");
-    var errorSpan = document.getElementById("error");
-    var clickMe = document.getElementById("clickMe");
+    const yesSpan = document.getElementById("yes");
+    const noSpan = document.getElementById("no");
+    const resultSpan = document.getElementById("result");
+    const timeSpan = document.getElementById("timeSpan");
+    const errorSpan = document.getElementById("error");
+    const clickMe = document.getElementById("clickMe");
 
-    var startDate
-    var startLast
-    var endDate
-    var count
+    const onTouchDevice = !!window.TouchEvent
+
+    let startDate
+    let startLast
+    let endDate
+    let count
 
     function startTimer() {
         startDate = new Date().getTime();
@@ -32,11 +34,7 @@ window.addEventListener('load', function () {
             var time = endDate - startDate;
             resultSpan.classList.remove("hidden");
             timeSpan.classList.remove("hidden");
-            if (time - 50 >= 1000) {
-                timeSpan.innerText = ((time - 50) / 1000 ).toString() + "s";
-            } else {
             timeSpan.innerText = (time - 50).toString() + "ms";
-            }
             if (time < 50) {
                 noSpan.classList.remove("hidden");
             } else {
@@ -58,6 +56,8 @@ window.addEventListener('load', function () {
 
     clickMe.addEventListener("mouseover", startTimer);
     clickMe.addEventListener("mouseout", removeText);
+    clickMe.addEventListener("touchstart", startTimer);
+    clickMe.addEventListener("touchend", removeText);
     clickMe.addEventListener("click", endTimer);
 
     function sleep(ms) {
@@ -73,8 +73,7 @@ window.addEventListener('load', function () {
         copier.innerHTML = "<strong>Copied!</strong>";
         sleep(1000).then(() => {
             copier.innerHTML = "<strong>Click me to copy!</strong>";
-        });   
-
+        });     
 
 }});
 

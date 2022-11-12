@@ -1,56 +1,57 @@
-// tachyon.js 0.2.2 - @weebney - BSD-2-Clause
-const dataAttr = document.currentScript.dataset;
-const whitelist = dataAttr.whitelist || false;
-const waitTime = dataAttr.timer || 50;
-let mouseOver = false;
+// tachyon.js 0.3.0 - @weebney - MIT License
+const scriptTagDataset = document.querySelector('script[data-tachyon]').dataset;
+const whitelistEnabled = scriptTagDataset.whitelist === '' || false;
+const timerDuration = scriptTagDataset.timer || 50;
+const usingTouchDevice = !!window.TouchEvent;
+let mouseTouchingAnchor = false;
 
 function prefetchToggle() {
-  mouseOver = !mouseOver;
   const { href } = this;
-  const tagid = `tachyon:${href}`;
+  const tagId = `tachyon:${href}`;
+  mouseTouchingAnchor = !mouseTouchingAnchor;
 
   try {
-    document.head.removeChild(document.getElementById(tagid));
-    return;
+    document.head.removeChild(document.getElementById(tagId));
   } catch {
     setTimeout(() => {
-      if (mouseOver) {
-        const link = document.createElement('link');
-        link.id = tagid;
-        link.href = href;
-        link.rel = 'prefetch';
-        document.head.appendChild(link);
+      if (mouseTouchingAnchor) {
+        const newLinkElement = document.createElement('link');
+        newLinkElement.id = tagId;
+        newLinkElement.href = href;
+        newLinkElement.rel = 'prefetch';
+        document.head.appendChild(newLinkElement);
       }
-    }, waitTime);
+    }, timerDuration);
   }
 }
 
-function addListeners(element) {
+function initializeListeners(element) {
   if (!element.href) {
     return;
   }
 
-  function apply() {
-    element.addEventListener('mouseover', prefetchToggle.bind(element));
-    element.addEventListener('mouseout', prefetchToggle.bind(element));
+  function listenForEvents(eventArray) {
+    eventArray.forEach((event) => element.addEventListener(event, prefetchToggle.bind(element)));
   }
 
-  const onList = typeof element.dataset.tachyon !== 'undefined';
-  if (!whitelist && !onList) {
-    apply();
-  } else if (whitelist && onList) {
-    apply();
+  function addListenersToElement() {
+    listenForEvents(['mouseover', 'mouseout']);
+    if (usingTouchDevice) {
+      listenForEvents(['touchstart', 'touchend']);
+    }
+  }
+
+  const onList = 'tachyon' in element.dataset;
+  if (!whitelistEnabled && !onList) {
+    addListenersToElement();
+  } else if (whitelistEnabled && onList) {
+    addListenersToElement();
   }
 }
 
-function main() {
-  document.querySelectorAll('a').forEach(addListeners);
-  const mutationObserver = new MutationObserver((mutations) => mutations
-    .forEach((mutatedElement) => mutatedElement.addedNodes.forEach(addListeners)));
-  mutationObserver.observe(document.body, {
-    childList: true,
-    subtree: true,
-  });
-}
+document.querySelectorAll('a').forEach(initializeListeners);
 
-window.onload = main;
+const mutationObserver = new MutationObserver((mutationRecordArray) => mutationRecordArray
+  .forEach((mutationRecord) => mutationRecord.addedNodes.forEach(initializeListeners)));
+
+mutationObserver.observe(document.body, { childList: true, subtree: true });

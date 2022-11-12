@@ -1,4 +1,4 @@
-// tachyon.js 0.2.0 - @weebney - BSD-2-Clause
+// tachyon.js 0.2.0 - @weebney - MIT License
 const dataAttr = document.currentScript.dataset;
 const whitelist = dataAttr.whitelist || false;
 const waitTime = dataAttr.timer || 50;

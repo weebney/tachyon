@@ -1,16 +1,17 @@
 {
   "name": "tachyonjs",
-  "version": "0.2.2",
-  "description": "Make your site faster than light; faster page loads in 685 bytes.",
-  "main": "tachyon-min.js",
+  "version": "0.3.0",
+  "description": "Make your site faster than light in <1 minute; instant page loads in 778 bytes.",
+  "main": "tachyon.js",
   "scripts": {
-    "test": "echo \"No test specified.\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/weebney/tachyon.git"
   },
   "keywords": [
+    "blazingly-fast",
     "performance",
     "prefetch",
     "predictive",
@@ -18,15 +19,16 @@
     "blazingly-fast"
   ],
   "files": [
-    "tachyon-min.js",
+    "tachyon.min.js",
     "tachyon.js",
     "readme.md",
     "LICENSE"
   ],
   "author": "weebney",
-  "license": "BSD-2-Clause",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/weebney/tachyon/issues"
   },
-  "homepage": "https://fasterthanlight.net"
+  "homepage": "https://fasterthanlight.net",
+  "type": "module"
 }
