@@ -13,8 +13,6 @@ window.addEventListener('load', function () {
     let endDate
     let count
 
-    addListener();
-
     function startTimer() {
         startDate = new Date().getTime();
         count = 0
@@ -34,11 +32,6 @@ window.addEventListener('load', function () {
         } else {
             count++
             var time = endDate - startDate;
-            if (onTouchDevice && time < 50) {
-                errorSpan.classList.remove("hidden");
-                errorSpan.innerText = "Tap again";
-                return;
-            }
             resultSpan.classList.remove("hidden");
             timeSpan.classList.remove("hidden");
             timeSpan.innerText = (time - 50).toString() + "ms";
@@ -61,15 +54,11 @@ window.addEventListener('load', function () {
         timeSpan.innerText = "";
     }
 
-    function addListener() {
-        clickMe.addEventListener("click", endTimer);
-        clickMe.addEventListener("mouseover", startTimer);
-        clickMe.addEventListener("mouseout", removeText);
-        clickMe.addEventListener("touchstart", startTimer);
-        clickMe.addEventListener("touchend", endTimer);
-    }
-
-
+    clickMe.addEventListener("mouseover", startTimer);
+    clickMe.addEventListener("mouseout", removeText);
+    clickMe.addEventListener("touchstart", startTimer);
+    clickMe.addEventListener("touchend", removeText);
+    clickMe.addEventListener("click", endTimer);
 
     function sleep(ms) {
         return new Promise(resolve => setTimeout(resolve, ms));
