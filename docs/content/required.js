@@ -39,6 +39,7 @@ window.addEventListener('load', function () {
                 if (onTouchDevice) {
                     errorSpan.classList.remove("hidden");
                     errorSpan.innerText = "Tap again; switching to Touch Mode)";
+                    return;
                 }
                 noSpan.classList.remove("hidden");
             } else {
