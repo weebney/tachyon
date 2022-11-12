@@ -36,10 +36,6 @@ window.addEventListener('load', function () {
             timeSpan.classList.remove("hidden");
             timeSpan.innerText = (time - 50).toString() + "ms";
             if (time < 50) {
-                if (onTouchDevice) {
-                    errorSpan.classList.remove("hidden");
-                    errorSpan.innerText = "Tap again; switching to Touch Mode)";
-                }
                 noSpan.classList.remove("hidden");
             } else {
                 yesSpan.classList.remove("hidden");

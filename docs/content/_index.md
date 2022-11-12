@@ -4,7 +4,7 @@ date: 2022-11-07T14:15:24-05:00
 draft: false
 ---
 <script src="required.js"></script>
-<script src="https://unpkg.com/tachyonjs@latest/tachyon.min.js" crossorigin defer></script>
+<script src="https://unpkg.com/tachyonjs@latest/tachyon.min.js" data-tachyon crossorigin defer></script>
 
 <link rel="stylesheet" href="wave.css">
 
