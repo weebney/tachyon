@@ -1,5 +1,6 @@
-test.html
+/test.html
 tachyon/.eslintrc.json
 tachyon/node_modules
-tachyon/minify.sh
+tachyon/minify
 /docs_old
+tachyon/package-lock.json
