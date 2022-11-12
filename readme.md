@@ -1,8 +1,6 @@
-![](https://raw.githubusercontent.com/weebney/tachyon/main/docs/res/favicon.svg)
-
 # Tachyon
 
-**Make your site faster than light in <1 minute; 5x instant page loads in 778 bytes.**
+**Make your site faster than light in <1 minute; instant page loads in 778 bytes.**
 
 🧰 The source/package files (original & minified) can be found in the [tachyon](https://github.com/weebney/tachyon/blob/main/tachyon/) directory of the repository.
 
@@ -16,7 +14,7 @@
 
 ## Feature Demonstration
 
-![](https://raw.githubusercontent.com/weebney/tachyon/main/docs/res/tachyonDemo.gif)
+![](https://github.com/weebney/tachyon/blob/main/docs/public/tachyonDemo.gif?raw=true)
 
 ## Using Tachyon
 

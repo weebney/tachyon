@@ -15,7 +15,8 @@
     "performance",
     "prefetch",
     "predictive",
-    "lightweight"
+    "lightweight",
+    "blazingly-fast"
   ],
   "files": [
     "tachyon.min.js",
