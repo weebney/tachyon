@@ -1,2 +1,0 @@
-#!/bin/sh
-uglifyjs -c -m --module --verbose tachyon.js > tachyon.min.js

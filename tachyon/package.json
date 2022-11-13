@@ -1,10 +1,10 @@
 {
   "name": "tachyonjs",
   "version": "0.3.0",
-  "description": "Make your site faster than light in <1 minute; instant page loads in 778 bytes.",
+  "description": "Make your site faster than light in <1 minute; instant page loads in 739 bytes.",
   "main": "tachyon.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "minify": "uglifyjs -c -m --module --verbose tachyon.js > tachyon.min.js"
   },
   "repository": {
     "type": "git",
