@@ -6,6 +6,7 @@ draft: false
 <script src="required.js"></script>
 <script src="https://unpkg.com/tachyonjs@latest/tachyon.min.js" data-tachyon crossorigin defer></script>
 
+<link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.6/dist/web/static/pretendard-std.css" />
 <link rel="stylesheet" href="wave.css">
 
 ![](/tachyon.svg)
@@ -47,7 +48,7 @@ In the above demo, "saved" refers to additional time that would have been spent 
 
 ## Using Tachyon
 
-<span id="copyText"><script src="https://unpkg.com/tachyonjs@0.3.0/tachyon.min.js" integrity="sha384-umSCiduUXC3WjlGsseGIEmhM6tRFPRIGLWINkZ/s7v/ql175CtYIh1c7C0SrUx3s" type="module" crossorigin data-tachyon defer></script></span>
+<span id="copyText">`<script src="https://unpkg.com/tachyonjs@0.3.0/tachyon.min.js" integrity="sha384-umSCiduUXC3WjlGsseGIEmhM6tRFPRIGLWINkZ/s7v/ql175CtYIh1c7C0SrUx3s" type="module" crossorigin data-tachyon defer></script>`</span>
 
 <div style="text-align:right;">
 <button id="copier">
@@ -95,7 +96,7 @@ Tachyon is hosted on [unpkg](https://unpkg.com/), a CDN that is trusted by many 
 
 ### Tachyon & Alternatives
 
-Tachyon could be considered an alternative to projects like [instant.page](https://web.archive.org/web/20221110043446/https://instant.page/) or , which offer a similar feature set. That being said, Tachyon has some serious advantages compared to other similar projects.
+Tachyon could be considered an alternative to projects like [instant.page](https://web.archive.org/web/20221110043446/https://instant.page/) which offer a similar feature set. That being said, Tachyon has some serious advantages compared to other similar projects.
 
 At a glance, in many cases **Tachyon improves your website's speed significantly more than instant.page yet is 9.64x smaller**.
 
@@ -133,8 +134,6 @@ Prefetching is supported but incorrectly implemented in Firefox- it will only wo
 Prefetching is currently disabled by default on both desktop and mobile versions of Safari. It is unclear if this behavior will change in the future.
 
 #### ⚠ Tachyon is in active development.
-
-Though there has not been any breaking changes so far, there may be breaking changes between versions related to the [advanced configurations](https://fasterthanlight.net/#advanced-configuration) in the future. Please check back here for updates between versions.
 
 Please report any bugs or issues you come across in the [issue tracker](https://github.com/weebney/tachyon/issues) of the [GitHub repository](https://github.com/weebney/tachyon/).
 
