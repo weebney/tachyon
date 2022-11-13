@@ -47,7 +47,7 @@ In the above demo, "saved" refers to additional time that would have been spent 
 
 ## Using Tachyon
 
-<span id="copyText">`<script src="https://unpkg.com/tachyonjs@0.3.0/tachyon.min.js" integrity="sha384-umSCiduUXC3WjlGsseGIEmhM6tRFPRIGLWINkZ/s7v/ql175CtYIh1c7C0SrUx3s" type="module" crossorigin data-tachyon defer></script>`</span>
+<span id="copyText"><script src="https://unpkg.com/tachyonjs@0.3.0/tachyon.min.js" integrity="sha384-umSCiduUXC3WjlGsseGIEmhM6tRFPRIGLWINkZ/s7v/ql175CtYIh1c7C0SrUx3s" type="module" crossorigin data-tachyon defer></script></span>
 
 <div style="text-align:right;">
 <button id="copier">
@@ -97,7 +97,7 @@ Tachyon is hosted on [unpkg](https://unpkg.com/), a CDN that is trusted by many 
 
 Tachyon could be considered an alternative to projects like [instant.page](https://web.archive.org/web/20221110043446/https://instant.page/) or , which offer a similar feature set. That being said, Tachyon has some serious advantages compared to other similar projects.
 
-To get an idea at a glance, in many cases **Tachyon improves your website's speed significantly more than instant.page yet is 3.7x smaller**.
+At a glance, in many cases **Tachyon improves your website's speed significantly more than instant.page yet is 9.64x smaller**.
 
 Compared to other alternatives, Tachyon is incredibly simple by design; it's a single script that you can easily add to your website with no necessary configuration for an instant speed boost. Tachyon's code is incredibly simple yet robust, leading to its small size and ease of maintenance & extensibility. It is also extremely easy to set up, and can be fully configured and deployed in one minute or less with virtually no impact on page weight.
 
