@@ -31,3 +31,7 @@
       background-position: var(--bg-size) 0;
     }
 }
+
+html {
+  font-family: "Pretendard Std";
+}

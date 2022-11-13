@@ -3,6 +3,9 @@ title: "Adding Tachyon to Squarespace"
 draft: false
 ---
 
+<link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.6/dist/web/static/pretendard-std.css" />
+<link rel="stylesheet" href="/wave.css">
+
 <script src="/cms/copy.js" defer></script>
 
 [← Home](/#using-tachyon)

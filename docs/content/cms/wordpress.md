@@ -3,6 +3,9 @@ title: "Adding Tachyon to WordPress"
 draft: false
 ---
 
+<link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.6/dist/web/static/pretendard-std.css" />
+<link rel="stylesheet" href="/wave.css">
+
 [← Home](/#using-tachyon)
 
 Adding Tachyon to WordPress is easier than ever. Just follow these steps:
