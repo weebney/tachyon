@@ -1,6 +1,6 @@
 {
   "name": "tachyonjs",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "description": "Make your site faster than light in <1 minute; instant page loads in 739 bytes.",
   "main": "tachyon.js",
   "scripts": {
@@ -29,6 +29,5 @@
   "bugs": {
     "url": "https://github.com/weebney/tachyon/issues"
   },
-  "homepage": "https://fasterthanlight.net",
-  "type": "module"
+  "homepage": "https://fasterthanlight.net"
 }

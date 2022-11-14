@@ -1,4 +1,4 @@
-// tachyon.js 0.3.0 - @weebney - MIT License
+// tachyon.js 0.3.1 - @weebney - MIT License
 const scriptTagDataset = document.querySelector('script[data-tachyon]').dataset;
 const whitelistEnabled = scriptTagDataset.whitelist === '' || false;
 const timerDuration = scriptTagDataset.timer || 50;
