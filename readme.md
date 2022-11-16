@@ -1,6 +1,6 @@
 # Tachyon
 
-**Make your site faster than light in <1 minute; instant page loads in 739 bytes.**
+**Make your site faster than light in <1 minute; instant page loads in 756 bytes.**
 
 🧰 The source/package files (original & minified) can be found in the [tachyon](https://github.com/weebney/tachyon/blob/main/tachyon/) directory of the repository.
 
@@ -22,7 +22,7 @@ Please visit [the website](https://fasterthanlight.net/) for more information.
 
 
 ```html
-<script src="https://unpkg.com/tachyonjs@0.3.1/tachyon.min.js" integrity="sha384-umSCiduUXC3WjlGsseGIEmhM6tRFPRIGLWINkZ/s7v/ql175CtYIh1c7C0SrUx3s" type="module" crossorigin data-tachyon defer></script>
+<script src="https://unpkg.com/tachyonjs@1.0.0/tachyon.min.js" integrity="sha384-nHCE0ztO4NbEujYvS4ORVuGP3OKmhwuhF1YRZ/NknEMmp1m6bAI68ZCw2jI4cLCP" type="module" crossorigin defer></script>
 ```
 The recommended way to use Tachyon is via a CDN. Tachyon is also available [via npm](https://www.npmjs.com/package/tachyonjs) with `npm i tachyonjs` 
 

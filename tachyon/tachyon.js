@@ -1,23 +1,22 @@
-// tachyon.js 0.3.1 - @weebney - MIT License
-const scriptTagDataset = document.querySelector('script[data-tachyon]').dataset;
-const whitelistEnabled = scriptTagDataset.whitelist === '' || false;
-const timerDuration = scriptTagDataset.timer || 50;
-const usingTouchDevice = !!window.TouchEvent;
-let mouseTouchingAnchor = false;
+// tachyon.js 1.0.0 - @weebney - MIT License
+const bodyDataValues = document.body.dataset;
+const whitelistEnabled = 'tachyonWhitelist' in bodyDataValues;
+const sameOriginOnly = 'tachyonSameOrigin' in bodyDataValues;
+const timerDuration = bodyDataValues.tachyonTimer || 50;
+let lastTouchedAnchor = null;
 
-function prefetchToggle() {
-  const { href } = this;
-  const tagId = `tachyon:${href}`;
-  mouseTouchingAnchor = !mouseTouchingAnchor;
+function togglePrefetch() {
+  const linkTagId = 'tachyon';
+  lastTouchedAnchor = lastTouchedAnchor ? null : this;
 
   try {
-    document.head.removeChild(document.getElementById(tagId));
+    document.head.removeChild(document.getElementById(linkTagId));
   } catch {
     setTimeout(() => {
-      if (mouseTouchingAnchor) {
+      if (lastTouchedAnchor === this) {
         const newLinkElement = document.createElement('link');
-        newLinkElement.id = tagId;
-        newLinkElement.href = href;
+        newLinkElement.id = linkTagId;
+        newLinkElement.href = this.href;
         newLinkElement.rel = 'prefetch';
         document.head.appendChild(newLinkElement);
       }
@@ -26,19 +25,13 @@ function prefetchToggle() {
 }
 
 function initializeListeners(element) {
-  if (!element.href) {
+  if ((element.tagName !== 'A' || !element.href) || (sameOriginOnly && element.origin !== window.location.origin)) {
     return;
   }
 
-  function listenForEvents(eventArray) {
-    eventArray.forEach((event) => element.addEventListener(event, prefetchToggle.bind(element)));
-  }
-
   function addListenersToElement() {
-    listenForEvents(['mouseover', 'mouseout']);
-    if (usingTouchDevice) {
-      listenForEvents(['touchstart', 'touchend']);
-    }
+    const listeners = ['mouseover', 'mouseout', 'touchstart', 'touchend'];
+    listeners.forEach((event) => element.addEventListener(event, togglePrefetch.bind(element)));
   }
 
   const onList = 'tachyon' in element.dataset;

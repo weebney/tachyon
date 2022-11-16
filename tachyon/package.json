@@ -1,7 +1,7 @@
 {
   "name": "tachyonjs",
-  "version": "0.3.1",
-  "description": "Make your site faster than light in <1 minute; instant page loads in 739 bytes.",
+  "version": "1.0.0",
+  "description": "Make your site faster than light in <1 minute; instant page loads in 756 bytes.",
   "main": "tachyon.js",
   "scripts": {
     "minify": "uglifyjs -c -m --module --verbose tachyon.js > tachyon.min.js"
@@ -29,5 +29,8 @@
   "bugs": {
     "url": "https://github.com/weebney/tachyon/issues"
   },
-  "homepage": "https://fasterthanlight.net"
+  "homepage": "https://fasterthanlight.net",
+  "devDependencies": {
+    "uglify-js": "^3.17.3"
+  }
 }
