@@ -1,7 +1,7 @@
 {
   "name": "tachyonjs",
   "version": "1.0.0",
-  "description": "Make your site faster than light in <1 minute; instant page loads in 756 bytes.",
+  "description": "Make your site faster than light in <1 minute; instant page loads in 755 bytes.",
   "main": "tachyon.js",
   "scripts": {
     "minify": "uglifyjs -c -m --module --verbose tachyon.js > tachyon.min.js"

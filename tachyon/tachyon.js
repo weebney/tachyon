@@ -5,13 +5,13 @@ const sameOriginOnly = 'tachyonSameOrigin' in bodyDataValues;
 const timerDuration = bodyDataValues.tachyonTimer || 50;
 let lastTouchedAnchor = null;
 
-function togglePrefetch() {
-  const linkTagId = 'tachyon';
+function toggleLinkTag() {
   lastTouchedAnchor = lastTouchedAnchor ? null : this;
-
-  try {
-    document.head.removeChild(document.getElementById(linkTagId));
-  } catch {
+  const linkTagId = 'tachyon';
+  const linkTag = document.getElementById(linkTagId);
+  if (linkTag) {
+    document.head.removeChild(linkTag);
+  } else {
     setTimeout(() => {
       if (lastTouchedAnchor === this) {
         const newLinkElement = document.createElement('link');
@@ -30,8 +30,7 @@ function initializeListeners(element) {
   }
 
   function addListenersToElement() {
-    const listeners = ['mouseover', 'mouseout', 'touchstart', 'touchend'];
-    listeners.forEach((event) => element.addEventListener(event, togglePrefetch.bind(element)));
+    ['mouseover', 'mouseout', 'touchstart', 'touchend'].forEach((eventName) => element.addEventListener(eventName, toggleLinkTag.bind(element)));
   }
 
   const onList = 'tachyon' in element.dataset;
