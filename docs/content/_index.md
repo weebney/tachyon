@@ -65,7 +65,7 @@ For most people the steps will look like this:
 
 3. That's it! Your website will now feel **blazingly fast 🔥🔥**
 
-For more advanced users, Tachyon can be downloaded [via GitHub](https://github.com/weebney/tachyon) for use without a CDN; it is also available via [npm](https://www.npmjs.com/package/tachyonjs) as tachyonjs.
+For more advanced users, Tachyon can be downloaded [via GitHub](https://github.com/weebney/tachyon) for use without a CDN ([more information](https://fasterthanlight.net/cms/self-hosting)); it is also available via [npm](https://www.npmjs.com/package/tachyonjs) as tachyonjs.
 
 ### Easy Setup Instructions
 
