@@ -4,21 +4,22 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  
-
-  <link rel="icon" href="{{ if (isset .Site.Params "favicon") }}{{ .Site.Params.favicon }}{{ else }}/favicon.svg{{ end }}">
+  <link rel="icon" href="{{ if (isset .Site.Params "favicon") }}{{ .Site.Params.favicon }}{{ else }}/favicon.ico{{ end }}">
 
   <title>
-    {{ block "title" . }} {{ .Site.Title -}} {{ end }}
+    {{ block "title" . }} {{- .Title }} - {{ .Site.Title -}} {{ end }}
   </title>
 
-  <meta name="description" content="Make your site faster than light in <1 minute; instant page loads in 778 bytes." />
+  <meta name="description" content="{{ with .Description }}{{ . }}{{ else }}{{if .IsPage}}{{ .Summary }}{{ else }}{{ with .Site.Params.description }}{{ . }}{{ end }}{{ end }}{{ end -}}" />
   
   {{- if .Keywords }}
   <meta name="keywords" content="{{ delimit .Keywords "," }}" />
   {{ end -}}
   
-
+  {{- if .Params.Author }}
+  <meta name="author" content="{{ .Params.Author}}" />
+  {{ end -}}
+  
   {{ hugo.Generator }}
 
   <link rel="stylesheet" href="{{ "/css/main.css" | absURL}}" />
@@ -44,9 +45,6 @@
       crossorigin="anonymous"
       onload="renderMathInElement(document.body);"
     ></script>
-
-    <script src="main.js"></script>
-<script src="tachyon.js"></script>
   {{ end }}
 
   {{ template "_internal/opengraph.html" . }}
