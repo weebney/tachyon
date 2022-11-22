@@ -50,7 +50,7 @@ jobs:
           HUGO_ENV: production
         run: |
           cd docs && npm i -g postcss-cli && npm run build
-      - name: Upload artifact
+      - name: Upload artifact to GH pages
         uses: actions/upload-pages-artifact@v1
         with:
           path: ./docs/public
