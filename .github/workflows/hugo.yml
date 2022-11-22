@@ -49,7 +49,7 @@ jobs:
           HUGO_ENVIRONMENT: production
           HUGO_ENV: production
         run: |
-          cd docs && git update-index --chmod=a+x ./node_modules/tailwindcss/lib/cli.js &&  npm i -g postcss-cli && npm run build
+          cd docs && npm i -g postcss-cli && npm run build
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v1
         with:
