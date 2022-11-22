@@ -24,7 +24,7 @@ Please visit [the website](https://fasterthanlight.net/) for more information.
 <script src="https://unpkg.com/tachyonjs@1.0.0/tachyon.min.js" integrity="sha384-heQJwFpZJtRgNigl/AIBiJDMVXglsdy1NzLiOjjc9yo8qLqSiBFPKCzVRiSKHNa4" type="module" crossorigin defer></script>
 ```
 
-It's recommended to self-host Tachyon if you're able to do so- you can get the necessary files in the [tachyon](https://github.com/weebney/tachyon/tree/main/tachyon) directory. Tachyon is also available [via npm](https://www.npmjs.com/package/tachyonjs) with `npm i tachyonjs` 
+It's recommended to self-host Tachyon if you're able to do so- view the [self-hosting information page](https://fasterthanlight.net/cms/self-hosting). Tachyon is also available [via npm](https://www.npmjs.com/package/tachyonjs) with `npm i tachyonjs` 
 
 ### Configuration
 
