@@ -3,7 +3,7 @@
 {{- partial "head.html" . -}}
 
 <body class="flex relative h-full min-h-screen">
-  <div class="flex-1">
+  <div class="flex-1" style="max-width:100%;">
     {{- block "main" . }}{{- end }}
   </div>
 </body>
