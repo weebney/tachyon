@@ -5,6 +5,7 @@ window.addEventListener('load', function () {
     const timeSpan = document.getElementById("timeSpan");
     const errorSpan = document.getElementById("error");
     const clickMe = document.getElementById("clickMe");
+    
     let startDate
     let startLast
     let endDate
