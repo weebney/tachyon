@@ -8,6 +8,6 @@ draft: false
 
 [← Home](/#using-tachyon)
 
-Self-hosting Tachyon is easy. Grab the latest release from the [GitHub repository](https://github.com/weebney/tachyon/tree/main/tachyon) (it's recommended you use `tachyon.min.js`) and upload it to your server. Link the script somewhere in your HTML with `<script src="..." defer>` and you're good to go!
+Self-hosting Tachyon is easy. Grab the latest release from the [GitHub repository](https://github.com/weebney/tachyon/tree/main/tachyon) (it's recommended you use `tachyon.min.js`) and upload it to your server. Link the script somewhere in your HTML with `<script src="..." type="module"  defer>` and you're good to go!
 
-⚠ Please keep in mind that your `<script>` tag ***MUST INCLUDE*** `defer`.
+⚠ Please keep in mind that your `<script>` tag **must include** `type="module"` and `defer`
