@@ -10,7 +10,7 @@ draft: false
 
 Adding Tachyon to WordPress is easier than ever. Just follow these steps:
 
-1. Download the [Tachyon plugin for WordPress](https://raw.githubusercontent.com/weebney/tachyon/main/wordpress/tachyon.zip)
+1. Download the [Tachyon plugin for WordPress](https://raw.githubusercontent.com/weebney/tachyon/main/tachyon/wordpress/tachyon.zip)
 2. Log into your WordPress admin panel
 3. In the menu, click on "Plugins" then "Add New"
 4. In the top left corner, click on "Upload Plugin"
