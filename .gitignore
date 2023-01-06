@@ -1,7 +1,12 @@
 /test.html
+
 tachyon/.eslintrc.json
 tachyon/node_modules
 tachyon/minify
-/docs_old
 tachyon/package-lock.json
+
 /build
+
+/docs/node_modules
+/docs/.hugo_build.lock
+/docs_old
