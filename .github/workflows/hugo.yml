@@ -49,8 +49,8 @@ jobs:
           HUGO_ENVIRONMENT: production
           HUGO_ENV: production
         run: |
-          git update-index --chmod=+x ./node_modules/* && cd docs && npm i -g postcss-cli && npm run build
-      - name: Upload artifact
+          cd docs && hugo --gc --minify
+      - name: Upload artifact to GH pages
         uses: actions/upload-pages-artifact@v1
         with:
           path: ./docs/public

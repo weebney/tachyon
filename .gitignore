@@ -5,4 +5,3 @@ tachyon/minify
 /docs_old
 tachyon/package-lock.json
 /build
-/docs/node_modules
