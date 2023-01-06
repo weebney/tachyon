@@ -1,5 +1,5 @@
 ---
-title: ""
+title: "Tachyon"
 date: 2022-11-07T14:15:24-05:00
 draft: false
 ---
@@ -48,7 +48,7 @@ In the above demo, "saved" refers to additional time that would have been spent 
 
 ## Using Tachyon
 
-<span id="copyText">`<script src="https://unpkg.com/tachyonjs@1.0.0/tachyon.min.js" integrity="sha384-heQJwFpZJtRgNigl/AIBiJDMVXglsdy1NzLiOjjc9yo8qLqSiBFPKCzVRiSKHNa4" type="module" crossorigin defer></script>`</span>
+<span id="copyText" style="inline-size: min-content;overflow-wrap: break-word;">`<script src="https://unpkg.com/tachyonjs@1.0.0/tachyon.min.js" integrity="sha384-heQJwFpZJtRgNigl/AIBiJDMVXglsdy1NzLiOjjc9yo8qLqSiBFPKCzVRiSKHNa4" type="module" crossorigin defer></script>`</span>
 
 <div style="text-align:right;">
 <button id="copier">
@@ -65,7 +65,7 @@ For most people the steps will look like this:
 
 3. That's it! Your website will now feel **blazingly fast 🔥🔥**
 
-For more advanced users, Tachyon can be downloaded [via GitHub](https://github.com/weebney/tachyon) for use without a CDN; it is also available via [npm](https://www.npmjs.com/package/tachyonjs) as tachyonjs.
+For more advanced users, Tachyon can be downloaded [via GitHub](https://github.com/weebney/tachyon) for use without a CDN ([more information](https://fasterthanlight.net/cms/self-hosting)); it is also available via [npm](https://www.npmjs.com/package/tachyonjs) as tachyonjs.
 
 ### Easy Setup Instructions
 
@@ -91,23 +91,23 @@ Tachyon's is free-and-open-source software (source available on [GitHub](https:/
     
 ## Technical Details
 
+### Default Behavior
+
+**By default, Tachyon will run on all `<a href="...">` tags.** When an end-user hovers their cursor over a link for more than 50ms, Tachyon will generate a `<link id="tachyon" rel="prefetch" href="...">` tag for the anchor's `href="..."` attribute. This will cause the browser to begin downloading the page content of `href="..."` in the background, so when the user clicks through the link, the page is already being downloaded and ready to begin loading into frame.
+
+When a user unhovers their cursor from a link, Tachyon will remove the `<link id="tachyon" rel="prefetch" href="...">` tag, canceling the download. This is done to prevent the browser from downloading content that the user may not click on and to avoid wasting bandwidth. There will only ever be one `<link id="tachyon" rel="prefetch" href="...">` tag at a time.
+
+These prefetch requests are given [extremely low priority](https://medium.com/reloading/preload-prefetch-and-priorities-in-chrome-776165961bbf); they will not interfere with the speed of other requests.
+
 ### Security
 
 Tachyon is completely safe to use on your website. It does not contain any tracking, analytics, or other malicious code- it's [completely open-source](https://github.com/weebney/tachyon) and plenty of sites trust Tachyon in production right now.
 
-Tachyon leverages [unpkg](https://unpkg.com/), a CDN that is trusted by many popular websites and powered by [Cloudflare](https://www.cloudflare.com/cdn/). 
+Tachyon leverages [unpkg](https://unpkg.com/), a CDN that is trusted by many popular websites and powered by [Cloudflare](https://www.cloudflare.com/). 
 
 Subresource integrity is used to ensure that the script delivered to your users' browsers hasn't been tampered with.
 
 The npm package (which is unpkg's source for Tachyon) is exclusively published from one machine behind a wireguard bastion; the subresource integrity hash and minified script are computed locally and updated on the dev branch of the [GitHub repository](https://github.com/weebney/tachyon) ahead of  new versions being published to npm. All official Tachyon pages, this website and the GitHub repository, are hosted by GitHub.
- 
-### Default Behavior
-
-**By default, Tachyon will run on all `<a href="...">` tags.** When an end-user hovers their cursor over a link for more than 50ms, Tachyon will generate a `<link rel="prefetch" href="...">` tag for the anchor's `href="..."` attribute. This will cause the browser to begin downloading the page content of `href="..."` in the background, so when the user clicks through the link, the page is already being downloaded and ready to begin loading into frame.
-
-When a user unhovers their cursor from a link, Tachyon will remove the `<link rel="prefetch" href="...">` tag, canceling the download. This is done to prevent the browser from downloading content that the user may not click on and to avoid wasting bandwidth.
-
-These prefetch requests are given [extremely low priority](https://medium.com/reloading/preload-prefetch-and-priorities-in-chrome-776165961bbf); they will not interfere with the speed of other requests.
 
 ### Tachyon & Alternatives
 
@@ -133,21 +133,7 @@ As I have taken this concept and fleshed it out for public use, I have focused o
 I want to make it as easy as possible for anyone, regardless of their technical prowess, to use Tachyon; everything from how Tachyon's features are implemented to how this website documents Tachyon's usage should be as easy to utilize as possible.
 
 - **Tachyon's codebase should be as simple as possible.**
-Simplicity is baked into Tachyon's design. Any person with a basic understanding of JavaScript should be able to understand Tachyon's codebase in a matter of minutes. This simplicity serves multiple functions: it makes Tachyon highly performant, easy to use, easy to maintain and extend by both myself and other developers, and it makes Tachyon extremely easy to audit and verify that it is safe to use on your website.
-
-### Frequently Asked Questions
-
-Tachyon gets some fair questions from time to time, mostly due to misunderstanding Tachyon's purpose and functionality.
-
-- **"Won't this encourage people to continue building bloated websites?"**
-
-In general, the developers currently working on any given website aren't really responsible for the majority of the bloat simply due to the fact that they likely didn't build it or just have better things to work on. Technical debt is an inevitable product of any piece of software's history, and the developers working on it are often just trying to keep the site running. I built Tachyon first-and-foremost for myself; my job as a consultant is to help a client get the most out what they have as quickly as possible without burdening their internal teams, and Tachyon is a tool that helps me do that. It's not a magic bullet that will fix all of their problems, but it's a tool that can help them get more out of their existing website without spending precious time trying to undo years of spaghetti code or migrate to some slick new technology.
-
-If you're building a new website, you should absolutely be building it as leanly as possible. If you're working on an existing website, you should absolutely be working to reduce its bloat. When neither of those are viable, i.e. a lot of the time, Tachyon is here for you.
-
-- **"Isn't prefetching content like this a privacy risk for end-users?"**
-
-Prefetching doesn't expose an end user to code execution (including tracking), as code isn't even downloaded until the user navigates to the page. The only risk is that the user's browser will download content that they don't end up using, but this is a risk that is inherent to the web and is not unique to Tachyon. In the exceptionally rare case that a user's threat model includes third-parties linked to by websites they use, it's their own responsibility to modify their browser for privacy; they will usually have already disabled prefetching in their browser whether they know it or not because many privacy extensions and privacy focused browsers do this by default.
+Simplicity is baked into Tachyon's design. Any person with a basic understanding of JavaScript should be able to understand Tachyon's code in a matter of minutes. This simplicity serves multiple functions: it makes Tachyon highly performant, easy to use, easy to maintain/extend by both myself and other developers, and it makes Tachyon extremely easy to audit and verify that it is safe to use on your website.
 
 ## Advanced Configuration
 
@@ -199,7 +185,7 @@ Many privacy and ad-blocking extensions disable the functionality that Tachyon r
 Tachyon does not work with single page applications/client-side routing. It shouldn't break anything, but it won't do anything either- this is because Tachyon relies on native prefetching functionality, which doesn't work with single page applications because client side routers hijack `<a>` tags.
 
 #### Firefox Support
-Prefetching is supported but incorrectly implemented in Firefox- it will only work as intended if the prefetched page is fully downloaded and cached. This is a known issue (and has been for years) that will likely be fixed in a future release of Firefox; the issue had its severity updated as recently as October 2022. 
+Prefetching is supported but incorrectly implemented in Firefox- it will only work as intended if the prefetched page is fully downloaded and cached. This is a [known issue](https://bugzilla.mozilla.org/show_bug.cgi?id=1527334) (and has been for years) that will likely be fixed in a future release of Firefox; the issue had its severity updated as recently as October 2022. 
 
 #### Safari Support
 Prefetching is currently disabled by default on both desktop and mobile versions of Safari. It is unclear if this behavior will change in the future.

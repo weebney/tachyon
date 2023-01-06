@@ -14,7 +14,7 @@
 
 ## Feature Demonstration
 
-![](https://github.com/weebney/tachyon/blob/main/docs/public/tachyonDemo.gif?raw=true)
+![](https://github.com/weebney/tachyon/blob/main/docs/tachyonDemo.gif?raw=true)
 
 ## Using Tachyon
 
@@ -24,7 +24,7 @@ Please visit [the website](https://fasterthanlight.net/) for more information.
 <script src="https://unpkg.com/tachyonjs@1.0.1/tachyon.min.js" integrity="sha384-YzRhaEvO+tu7clAuAStGkSR0bVr2+IIq1gXxi28k2Wj0gGAdPOuruYnTSFOXLv0I" type="module" crossorigin defer></script>
 ```
 
-The recommended way to use Tachyon is via a CDN. Tachyon is also available [via npm](https://www.npmjs.com/package/tachyonjs) with `npm i tachyonjs` 
+It's recommended to self-host Tachyon if you're able to do so- view the [self-hosting information page](https://fasterthanlight.net/cms/self-hosting). Tachyon is also available [via npm](https://www.npmjs.com/package/tachyonjs) with `npm i tachyonjs` 
 
 ### Configuration
 
