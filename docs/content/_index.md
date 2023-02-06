@@ -48,7 +48,7 @@ In the above demo, "saved" refers to additional time that would have been spent 
 
 ## Using Tachyon
 
-<span id="copyText" style="inline-size: min-content;overflow-wrap: break-word;">`<script src="https://unpkg.com/tachyonjs@1.0.0/tachyon.min.js" integrity="sha384-heQJwFpZJtRgNigl/AIBiJDMVXglsdy1NzLiOjjc9yo8qLqSiBFPKCzVRiSKHNa4" type="module" crossorigin defer></script>`</span>
+<span id="copyText" style="inline-size: min-content;overflow-wrap: break-word;">`<script src="https://unpkg.com/tachyonjs@1.0.1/tachyon.min.js" integrity="sha384-YzRhaEvO+tu7clAuAStGkSR0bVr2+IIq1gXxi28k2Wj0gGAdPOuruYnTSFOXLv0I" type="module" crossorigin defer></script>`</span>
 
 <div style="text-align:right;">
 <button id="copier">
