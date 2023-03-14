@@ -2,8 +2,6 @@
 
 Tachyon is a byte sized script that makes your website feel blazingly fast. It does this by prerendering pages before a user navigates to them, making page transitions virtually instant.
 
-![](https://github.com/weebney/tachyon/blob/main/docs/tachyonDemo.gif?raw=true)
-
 **Documentation for Tachyon lives at [fasterthanlight.net](fasterthanlight.net)**
 
 Quick Links:
