@@ -1,4 +1,4 @@
-// tachyon.js 1.1.0 - @weebney - MIT License
+// tachyon.js 1.1.1 - @weebney - MIT License
 const bodyDataValues = document.body.dataset;
 const whitelistEnabled = 'tachyonWhitelist' in bodyDataValues;
 const sameOriginOnly = 'tachyonSameOrigin' in bodyDataValues;
@@ -17,7 +17,7 @@ function toggleLinkTag() {
         const newLinkElement = document.createElement('link');
         newLinkElement.id = linkTagId;
         newLinkElement.href = this.href;
-        newLinkElement.rel = 'prefetch';
+        newLinkElement.rel = 'prerender';
         document.head.appendChild(newLinkElement);
       }
     }, timerDuration);
@@ -30,7 +30,7 @@ function initializeListeners(element) {
   }
   const onList = 'tachyon' in element.dataset;
   if (whitelistEnabled === onList) {
-    ['mouseover', 'mouseout', 'touchstart', 'touchend'].forEach((eventName) => element.addEventListener(eventName, toggleLinkTag.bind(element), { passive: true }));
+    ['mouseover', 'mouseout', 'touchstart', 'touchend'].forEach((eventName) => element.addEventListener(eventName, toggleLinkTag, { passive: true }));
   }
 }
 
@@ -39,9 +39,9 @@ document.querySelectorAll('a').forEach(initializeListeners);
 const mutationObserver = new MutationObserver((mutationRecordArray) => {
   const addedAnchors = mutationRecordArray
     .flatMap((mutationRecord) => Array.from(mutationRecord.addedNodes))
-    .filter((node) => node.tagName === 'A').filter((node) => node.href);
+    .filter((node) => node.tagName === 'A' && node.href);
 
-  addedAnchors.forEach((anchor) => initializeListeners(anchor));
+  addedAnchors.forEach(initializeListeners);
 });
 
 mutationObserver.observe(document.body, { childList: true, subtree: true });
