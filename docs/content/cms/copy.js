@@ -1,7 +1,7 @@
 const codeBlock = document.getElementById("codeBlock")
 const copyButton = document.getElementById("copier")
 
-codeBlock.innerText = '<script src="https://unpkg.com/tachyonjs@1.1.0/tachyon.min.js" integrity="sha384-CtVYSBNkcN7pv9PyX+bA3g2gO9x+hUB9SLdJPJXHf1c3cdE3ZAx6Rn7npdQJQ1C7" type="module" crossorigin defer></script>';
+codeBlock.innerText = '<script src="https://unpkg.com/tachyonjs@1.1.1/tachyon.min.js" integrity="sha384-eAVplf5NYzHCSEB5NSZ5vabWAMYIb9Y2E4SKcU78UTIjukDs0tMxFQX0FLmBVYi8" type="module" crossorigin defer></script>';
 
 function sleep(ms) {
     return new Promise(resolve => setTimeout(resolve, ms));
