@@ -129,7 +129,7 @@ Tachyon could be considered an alternative to projects like [instant.page](https
     <td>Prerendering<br>(Fastest Loads)</td>
     <td>✅</td>
     <td>❌</td>
-    <td>❌</td>
+    <td>~</td>
     <td>❌</td>
 </tr>
 

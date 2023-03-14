@@ -44,7 +44,7 @@ Easy Setup Instructions:
     <td>Prerendering (Fastest Loads)</td>
     <td>✅</td>
     <td>❌</td>
-    <td>❌</td>
+    <td>~</td>
     <td>❌</td>
 </tr>
 
