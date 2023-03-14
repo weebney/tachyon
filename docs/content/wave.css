@@ -43,3 +43,21 @@ html {
 .prose :where(code):not(:where([class~="not-prose"] *))::before {
 	content: "";
 }
+
+th, td {
+  text-align: center;
+}
+
+tr>td:nth-child(2),tr>th:nth-child(2) {
+  background-color: whitesmoke ;
+  width: 22%;
+
+}
+
+tr>td:nth-child(1){
+  text-align: left;
+}
+
+p, table, a, i, .prose :where(strong):not(:where([class~="not-prose"] *)), b, .prose :where(a):not(:where([class~="not-prose"] *)), .prose :where(.prose > ol > li > :last-child):not(:where([class~="not-prose"] *)), .prose :where(.prose > ul > li > :last-child):not(:where([class~="not-prose"] *)), .prose :where(h1):not(:where([class~="not-prose"] *)), .prose :where(h2):not(:where([class~="not-prose"] *)), .prose :where(h3):not(:where([class~="not-prose"] *)), .prose :where(h4):not(:where([class~="not-prose"] *)) {
+  color: black;
+}
