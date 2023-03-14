@@ -57,7 +57,7 @@ In the above demo, the time "saved" refers to time that would have been wasted w
 
 ## Using Tachyon
 
-<span id="copyText" style="inline-size: min-content;overflow-wrap: break-word;">`<script src="https://unpkg.com/tachyonjs@1.0.1/tachyon.min.js" integrity="sha384-YzRhaEvO+tu7clAuAStGkSR0bVr2+IIq1gXxi28k2Wj0gGAdPOuruYnTSFOXLv0I" type="module" crossorigin defer></script>`</span>
+<span id="copyText" style="inline-size: min-content;overflow-wrap: break-word;">`<script src="https://unpkg.com/tachyonjs@1.1.1/tachyon.min.js" integrity="sha384-eAVplf5NYzHCSEB5NSZ5vabWAMYIb9Y2E4SKcU78UTIjukDs0tMxFQX0FLmBVYi8" type="module" crossorigin defer></script>`</span>
 
 <div style="text-align:right;">
 <button id="copier">
@@ -113,7 +113,7 @@ Tachyon could be considered an alternative to projects like [instant.page](https
   </tr>
   <tr>
     <td>Size</td>
-    <td><b>759 b</b></td>
+    <td><b>760 b</b></td>
     <td>2.88 kb<br>(3.8x bigger)</td>
     <td>60.1 kb<br>(80x bigger)</td>
     <td>111 kb<br>(146x bigger)</td>
