@@ -11,12 +11,12 @@ Quick Links:
 - [Why Tachyon exists](https://fasterthanlight.net/#the-why-the-how)
 
 Easy Setup Instructions:
-- [Google Tag Manager](https://fasterthanlight/cms/google-tag-manager) ⭐
-- [Shopify](https://fasterthanlight/cms/shopify)
-- [Squarespace](https://fasterthanlight/cms/squarespace)
-- [Webflow](https://fasterthanlight/cms/webflow)
-- [Wix](https://fasterthanlight/cms/wix)
-- [WordPress](https://fasterthanlight/cms/wordpress)
+- [Google Tag Manager](https://fasterthanlight.net/cms/google-tag-manager) ⭐
+- [Shopify](https://fasterthanlight.net/cms/shopify)
+- [Squarespace](https://fasterthanlight.net/cms/squarespace)
+- [Webflow](https://fasterthanlight.net/cms/webflow)
+- [Wix](https://fasterthanlight.net/cms/wix)
+- [WordPress](https://fasterthanlight.net/cms/wordpress)
 
  <table>
   <tr>
@@ -78,7 +78,7 @@ Using Tachyon is unbelieveably easy. If you're not using node, you can just incl
 <script src="https://unpkg.com/tachyonjs@1.1.1/tachyon.min.js" integrity="sha384-eAVplf5NYzHCSEB5NSZ5vabWAMYIb9Y2E4SKcU78UTIjukDs0tMxFQX0FLmBVYi8" type="module" crossorigin defer></script>
 ```
 
-If you look on the website, there are also easy install instructions for [Google Tag Manager](https://fasterthanlight/#easy-setup-instructions), [Shopify](https://fasterthanlight/#easy-setup-instructions), [WordPress](https://fasterthanlight/#easy-setup-instructions), and more.
+If you look on the website, there are also easy install instructions for [Google Tag Manager](https://fasterthanlight.net/#easy-setup-instructions), [Shopify](https://fasterthanlight.net/#easy-setup-instructions), [WordPress](https://fasterthanlight.net/#easy-setup-instructions), and more.
 
 ### Node
 
