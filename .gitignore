@@ -2,7 +2,6 @@
 
 tachyon/.eslintrc.json
 tachyon/node_modules
-tachyon/minify
 tachyon/package-lock.json
 
 /build
