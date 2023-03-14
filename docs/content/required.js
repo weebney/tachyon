@@ -4,24 +4,28 @@ const resultSpan = document.getElementById("result");
 const timeSpan = document.getElementById("timeSpan");
 const errorSpan = document.getElementById("error");
 const clickMe = document.getElementById("clickMe");
-const codep = document.getElementById("copyText");
-const copier = document.getElementById("copier");
 
-let startDate, startLast, endDate, count;
+let startDate
+let startLast
+let endDate
+let count
 
 function startTimer() {
     startDate = new Date().getTime();
     count = 0
+    return
 }
 
 function endTimer() {
     endDate = new Date().getTime();
-    if (count > 0 && endDate < startDate) {
+    startLast = startDate
+    if ((startLast == startDate) & (count > 0)) {
         errorSpan.classList.remove("hidden");
         noSpan.classList.add("hidden")
         yesSpan.classList.add("hidden");
         timeSpan.classList.add("hidden");
         resultSpan.classList.add("hidden");
+        return
     } else {
         count++
         var time = endDate - startDate;
@@ -33,11 +37,17 @@ function endTimer() {
         } else {
             yesSpan.classList.remove("hidden");
         }
+
     }
+    return
 }
 
 function removeText() {
-    [noSpan, yesSpan, timeSpan, resultSpan, errorSpan].forEach(e => e.classList.add("hidden"));
+    noSpan.classList.add("hidden")
+    yesSpan.classList.add("hidden");
+    timeSpan.classList.add("hidden");
+    resultSpan.classList.add("hidden");
+    errorSpan.classList.add("hidden");
     timeSpan.innerText = "";
 }
 
@@ -47,11 +57,17 @@ clickMe.addEventListener("touchstart", startTimer);
 clickMe.addEventListener("touchend", removeText);
 clickMe.addEventListener("click", endTimer);
 
-async function toClipboard() {
-    await navigator.clipboard.writeText(codep.innerText);
-    copier.innerHTML = "<strong>Copied!</strong>";
-    await new Promise(resolve => setTimeout(resolve, 1000));
-    copier.innerHTML = "<strong>Click me to copy!</strong>";
+function sleep(ms) {
+    return new Promise(resolve => setTimeout(resolve, ms));
 }
 
+var codep = document.getElementById("copyText");
+var copier = document.getElementById("copier");
 copier.addEventListener("click", toClipboard);
+
+function toClipboard() {
+    navigator.clipboard.writeText(codep.innerText);
+    copier.innerHTML = "<strong>Copied!</strong>";
+    sleep(1000).then(() => {
+        copier.innerHTML = "<strong>Click me to copy!</strong>";
+    });     }
