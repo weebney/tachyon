@@ -113,10 +113,10 @@ Tachyon could be considered an alternative to projects like [instant.page](https
   </tr>
   <tr>
     <td>Size</td>
-    <td><b>760 b</b></td>
-    <td>2.88 kb<br>(3.8x bigger)</td>
-    <td>60.1 kb<br>(80x bigger)</td>
-    <td>111 kb<br>(146x bigger)</td>
+    <td><b>698 b</b></td>
+    <td>2.88 kb<br>(4.1x larger)</td>
+    <td>60.1 kb<br>(86x larger)</td>
+    <td>111 kb<br>(159x larger)</td>
   </tr>
  <tr>
     <td>Bandwidth<br>Overhead</td>

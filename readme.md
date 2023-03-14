@@ -28,10 +28,10 @@ Easy Setup Instructions:
   </tr>
   <tr>
     <td>Size</td>
-    <td><b>760 b</b></td>
-    <td>2.88 kb<br>(3.8x bigger)</td>
-    <td>60.1 kb<br>(80x bigger)</td>
-    <td>111 kb<br>(146x bigger)</td>
+    <td><b>698 b</b></td>
+    <td>2.88 kb<br>(4.1x larger)</td>
+    <td>60.1 kb<br>(86x larger)</td>
+    <td>111 kb<br>(159x larger)</td>
   </tr>
  <tr>
     <td>Bandwidth Overhead</td>
@@ -75,7 +75,7 @@ Easy Setup Instructions:
 Using Tachyon is unbelieveably easy. If you're not using node, you can just include it via script tags. Provided below is the script hosted by [unpkg](https://unpkg.com/). The source itself lives in the [tachyon directory](https://github.com/weebney/tachyon/tree/main/tachyon).
 
 ```html
-<script src="https://unpkg.com/tachyonjs@1.1.1/tachyon.min.js" integrity="sha384-eAVplf5NYzHCSEB5NSZ5vabWAMYIb9Y2E4SKcU78UTIjukDs0tMxFQX0FLmBVYi8" type="module" crossorigin defer></script>
+<script src="https://unpkg.com/tachyonjs@1.1.2/tachyon.min.js" integrity="sha384-mWEnITn0upRV8CTm3KnqWW5XKFt7bnWaT6RBKBRIcCPyZx9dxqbAH56ew8NwOTgN" type="module" crossorigin defer></script>
 ```
 
 If you look on the website, there are also easy install instructions for [Google Tag Manager](https://fasterthanlight.net/#easy-setup-instructions), [Shopify](https://fasterthanlight.net/#easy-setup-instructions), [WordPress](https://fasterthanlight.net/#easy-setup-instructions), and more.
@@ -86,18 +86,12 @@ If you look on the website, there are also easy install instructions for [Google
 npm i tachyonjs
 ```
 
-Then import it somewhere useful, like `index.js`:
-
-```js
-import 'tachyonjs';
-```
-
 ### Inline
 
 Tachyon is super tiny, so you can also inline it. If you use the following inlined `<script>` tags, you are waived from the legal requirement to include a copy of the license.
 
 ```html
-<script type="module" defer>/* tachyon 1.1.1 */var e=document.body.dataset;const o="tachyonWhitelist"in e,n="tachyonSameOrigin"in e,a=e.tachyonTimer||50;let r=null;function i(){r=r?null:this;const t="tachyon";var e=document.getElementById(t);e?document.head.removeChild(e):setTimeout(()=>{var e;r===this&&((e=document.createElement("link")).id=t,e.href=this.href,e.rel="prerender",document.head.appendChild(e))},a)}function t(t){var e;n&&t.origin!==window.location.origin||(e="tachyon"in t.dataset,o==e&&["mouseover","mouseout","touchstart","touchend"].forEach(e=>t.addEventListener(e,i,{passive:!0})))}document.querySelectorAll("a").forEach(t),new MutationObserver(e=>{e.flatMap(e=>Array.from(e.addedNodes)).filter(e=>"A"===e.tagName&&e.href).forEach(t)}).observe(document.body,{childList:!0,subtree:!0});</script>
+<script type="module" defer>/* tachyon 1.1.2 */var e=document.body.dataset;const n="tachyonWhitelist"in e,o="tachyonSameOrigin"in e,r=e.tachyonTimer||50;let a=null;function i(){a=a?null:this;const t="tachyon";var e=document.getElementById(t);e?e.remove():setTimeout(()=>{var e;a===this&&((e=document.createElement("link")).id=t,e.href=this.href,e.rel="prerender",document.head.appendChild(e))},r)}function t(t){"A"!==t.tagName||!t.href||"tachyon"in t.dataset!=n||o&&t.origin!==window.location.origin||["mouseover","mouseout","touchstart","touchend"].forEach(e=>t.addEventListener(e,i,{passive:!0}))}new MutationObserver(e=>{e.forEach(e=>e.forEach(t))}).observe(document.body,{childList:!0,subtree:!0}),document.querySelectorAll("a").forEach(t);</script>
 ```
 
 ### Configuration
