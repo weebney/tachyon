@@ -28,7 +28,7 @@ Easy Setup Instructions:
   </tr>
   <tr>
     <td>Size</td>
-    <td><b>698 b</b></td>
+    <td><b>707 b</b></td>
     <td>2.88 kb<br>(4.1x larger)</td>
     <td>60.1 kb<br>(86x larger)</td>
     <td>111 kb<br>(159x larger)</td>
@@ -118,7 +118,6 @@ There is a [list of known issues](https://fasterthanlight.net/#known-issues) on 
 
 - [You](https://en.wikipedia.org/wiki/You_(Time_Person_of_the_Year)) (the reader) for your support, contribution, and time; I'm glad this project has been beneficial to you
 - [Alexandre Dieulot](https://dieulot.fr/), creator of [instant.page](https://instant.page/) which undoubtedly paved the way for Tachyon
-- [Jordan Sissel](https://github.com/jordansissel) for reminding us what attitude we should approach free and open software with 
 - [frontendfoc.us](https://frontendfoc.us/) for the completely unexpected [positive press](https://frontendfoc.us/issues/582) while this project was still in its infancy
 
 ![Star History Chart](https://api.star-history.com/svg?repos=weebney/tachyon&type=Date)
