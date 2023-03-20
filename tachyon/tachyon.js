@@ -30,9 +30,9 @@ function initializeListeners(node) {
   }
 }
 
-const mutationObserver = new MutationObserver((mutationRecordArray) => {
-  mutationRecordArray.forEach(record => record.forEach(initializeListeners))
-});
+const mutationObserver = new MutationObserver((mutationRecordArray) => 
+ mutationRecordArray.forEach((record) => record.addedNodes.forEach(initializeListeners)));
+
 mutationObserver.observe(document.body, { childList: true, subtree: true });
 
 document.querySelectorAll('a').forEach(initializeListeners);
