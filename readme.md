@@ -75,7 +75,7 @@ Easy Setup Instructions:
 Using Tachyon is unbelieveably easy. If you're not using node, you can just include it via script tags. Provided below is the script hosted by [unpkg](https://unpkg.com/). The source itself lives in the [tachyon directory](https://github.com/weebney/tachyon/tree/main/tachyon).
 
 ```html
-<script src="https://unpkg.com/tachyonjs@1.1.2/tachyon.min.js" integrity="sha384-mWEnITn0upRV8CTm3KnqWW5XKFt7bnWaT6RBKBRIcCPyZx9dxqbAH56ew8NwOTgN" type="module" crossorigin defer></script>
+<script src="https://unpkg.com/tachyonjs@1.1.3/tachyon.min.js" integrity="sha384-V5UK6PaMtG5fx05ToAClLlgsvoCVR0KpFYIGKcdw95yKQwRpKnOISeAXVK9EQG/V" type="module" crossorigin defer></script>
 ```
 
 If you look on the website, there are also easy install instructions for [Google Tag Manager](https://fasterthanlight.net/#easy-setup-instructions), [Shopify](https://fasterthanlight.net/#easy-setup-instructions), [WordPress](https://fasterthanlight.net/#easy-setup-instructions), and more.
@@ -91,7 +91,7 @@ npm i tachyonjs
 Tachyon is super tiny, so you can also inline it. If you use the following inlined `<script>` tags, you are waived from the legal requirement to include a copy of the license.
 
 ```html
-<script type="module" defer>/* tachyon 1.1.2 */var e=document.body.dataset;const n="tachyonWhitelist"in e,o="tachyonSameOrigin"in e,r=e.tachyonTimer||50;let a=null;function i(){a=a?null:this;const t="tachyon";var e=document.getElementById(t);e?e.remove():setTimeout(()=>{var e;a===this&&((e=document.createElement("link")).id=t,e.href=this.href,e.rel="prerender",document.head.appendChild(e))},r)}function t(t){"A"!==t.tagName||!t.href||"tachyon"in t.dataset!=n||o&&t.origin!==window.location.origin||["mouseover","mouseout","touchstart","touchend"].forEach(e=>t.addEventListener(e,i,{passive:!0}))}new MutationObserver(e=>{e.forEach(e=>e.forEach(t))}).observe(document.body,{childList:!0,subtree:!0}),document.querySelectorAll("a").forEach(t);</script>
+<script type="module" defer>/* tachyon 1.1.3 */var e=document.body.dataset;const o="tachyonWhitelist"in e,n="tachyonSameOrigin"in e,a=e.tachyonTimer||50;let r=null;function i(){r=r?null:this;const t="tachyon";var e=document.getElementById(t);e?e.remove():setTimeout(()=>{var e;r===this&&((e=document.createElement("link")).id=t,e.href=this.href,e.rel="prerender",document.head.appendChild(e))},a)}function t(t){"A"!==t.tagName||!t.href||"tachyon"in t.dataset!=o||n&&t.origin!==window.location.origin||["mouseover","mouseout","touchstart","touchend"].forEach(e=>t.addEventListener(e,i,{passive:!0}))}new MutationObserver(e=>e.forEach(e=>e.addedNodes.forEach(t))).observe(document.body,{childList:!0,subtree:!0}),document.querySelectorAll("a").forEach(t);</script>
 ```
 
 ### Configuration

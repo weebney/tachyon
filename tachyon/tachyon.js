@@ -1,4 +1,4 @@
-// tachyon.js 1.1.2 - @weebney - MIT License
+// tachyon.js 1.1.3 - @weebney - MIT License
 const bodyDataValues = document.body.dataset;
 const whitelistEnabled = 'tachyonWhitelist' in bodyDataValues;
 const sameOriginOnly = 'tachyonSameOrigin' in bodyDataValues;
