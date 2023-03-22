@@ -4,7 +4,8 @@
   "description": "Make your site faster than light in <1 minute; instant page loads in 707 bytes.",
   "main": "tachyon.js",
   "scripts": {
-    "minify": "uglifyjs -c -m --module --verbose tachyon.js > tachyon.min.js"
+    "minify": "uglifyjs -c -m --module --verbose tachyon.js > tachyon.min.js",
+    "test": "cp tachyon.js test/tachyon.js && http-server test/"
   },
   "repository": {
     "type": "git",
@@ -21,8 +22,7 @@
   "files": [
     "tachyon.min.js",
     "tachyon.js",
-    "readme.md",
-    "LICENSE"
+    "test/*"
   ],
   "author": "weebney",
   "license": "MIT",
@@ -31,9 +31,7 @@
   },
   "homepage": "https://fasterthanlight.net",
   "devDependencies": {
-    "chai": "^4.3.7",
-    "mocha": "^10.2.0",
-    "puppeteer": "^19.7.5",
+    "http-server": "^14.1.1",
     "uglify-js": "^3.17.3"
   }
 }

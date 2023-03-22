@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<script src="../tachyon.js" defer></script>
+	<link rel="shortcut icon" href="#">
+	<script src="./driver.js"></script>
+	<title>Whitelist, Same Origin</title>
+	<!-- tachyon tag should appear below -->
+</head>
+
+<body data-tachyon-same-origin data-tachyon-whitelist>
+	<h1>Tachyon</h1>
+	<h2>Local test suite</h2>
+
+	<ul id="myList">
+		<a href="https://CNN.com">CNN</a>
+		<a href="https://facebook.com">Facebook</a>
+	</ul>
+
+	<p>Click "Append" to append an item to the end of the list:</p>
+
+	<button onclick="append()">Append</button>
+	<button onclick="appendNonAnchor()">Append Non-Anchor</button>
+	<button onclick="multipleDomChanges()">Append Multiple Anchors</button>
+	<button onclick="whitelistedAnchor()">Append White/Blacklisted Anchor</button>
+	<button onclick="sameOrigin()">Append Same Origin Anchor</button>
+	<button onclick="updateDomDelay()">Update DOM in 3 seconds</button>
+	<button onclick="noHref()">HREFless</button>
+
+	<h3>Environment Settings:</h3>
+
+	<button onclick="changePage('sameorigin.html')">Toggle Whitelist</button>
+	<button onclick="changePage('whitelist.html')">Toggle Same-Origin</button>
+
+	<br>
+
+	<h3>Environment Variables:</h3>
+	<div style="display: inline-flex;width: 100%;">
+		<p style="margin: 10px;" id="sameOriginEnv">Same-Origin: Enabled</p>
+		<p style="margin: 10px;" id="whitelistEnv">Whitelist: Enabled</p>
+		<p style="margin: 10px;" id="blacklistEnv">Blacklist: Disabled</p>
+	</div>
+
+</body>
+
+</html>
