@@ -171,7 +171,7 @@ It's not like Tachyon offers less features than other projects, either (it has c
 
 **By default, Tachyon will run on all `<a href="...">` tags.** When an end-user hovers their cursor over a link for more than 50ms, Tachyon will generate a `<link id="tachyon" rel="prerender" href="...">` tag for the anchor's `href="..."` attribute. This will cause the browser to begin downloading the page content of `href="..."` in the background, so when the user clicks through the link, the page is already being downloaded and ready to begin loading into frame.
 
-When a user unhovers their cursor from a link, Tachyon will remove the `<link id="tachyon" rel="prerender" href="...">` tag, canceling the download. This is done to prevent the browser from downloading content that the user may not click on and to avoid wasting bandwidth. There will only ever be one `<link id="tachyon" rel="prerender" href="...">` tag at a time.
+When a user unhovers their cursor from a link, Tachyon will remove the `<link id="tachyon" rel="prerender" href="...">` tag, canceling the download. This is done to prevent the browser from downloading content that the user may not click on and to avoid wasting bandwidth. There will only ever be one page prerendering at a time, saving additional bandwidth.
 
 These preload requests are given [extremely low priority](https://medium.com/reloading/preload-prefetch-and-priorities-in-chrome-776165961bbf); they will not interfere with the speed of other requests.
 
@@ -291,3 +291,4 @@ Please report any bugs or issues you come across in the [issue tracker](https://
 [^8]: Jeffers, J. (2019, August 20). [Site Speed is (Still) Impacting Your Conversion Rate](https://www.portent.com/blog/analytics/research-site-speed-hurting-everyones-revenue.htm). Portent. 
 
 [^9]: Breibon, A. (2018, June 27). [How Does Page Speed Really Affect your Conversions?](https://www.abtasty.com/blog/page-speed-conversions/) AB Tasty. 
+  
