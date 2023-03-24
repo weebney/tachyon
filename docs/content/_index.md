@@ -265,7 +265,7 @@ Many privacy and ad-blocking extensions disable the functionality that Tachyon r
 Tachyon does not work with single page applications/client-side routing. It shouldn't break anything, but it won't do anything either- this is because Tachyon relies on native preloading functionality, which doesn't work with single page applications because client side routers hijack `<a>` tags.
 
 #### Firefox Support
-Prerendering is not currently supported in Firefox- [it is planned](https://wiki.mozilla.org/Gecko:Prerendering), though! As some consolation, none of the other alternatives to Tachyon work in Firefox either; `prefetch` has been broken since it was introduced.
+Preloading content is not currently supported in Firefox- [it is planned](https://wiki.mozilla.org/Gecko:Prefetching), though! As some consolation, none of the other alternatives to Tachyon work in Firefox either; `prefetch` has been broken since it was introduced.
 
 #### Safari Support
 Prerendering is currently disabled by default on both desktop and mobile versions of Safari. It is unclear if this behavior will change in the future.
