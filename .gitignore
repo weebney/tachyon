@@ -4,6 +4,9 @@ tachyon/.eslintrc.json
 tachyon/node_modules
 tachyon/package-lock.json
 
+tachyon/test/tachyon.js
+
+
 /build
 
 /docs/node_modules

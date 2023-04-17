@@ -15,6 +15,13 @@ draft: false
 
 Tachyon is a byte-sized script that improves the user experience of your website by making navigation between pages significantly quicker.
 
+<span style="font-size:110%;"><span style="">**To test if Tachyon would've helped</span>,** <button id="confetti"><span id="clickMe" style="font-weight:bold;">click
+                            me!</span></button></span>
+                        <span class="hidden" id="no">No!</span> <span class="hidden" id="yes">Yes!</span>
+                        <span class="hidden" id="result">*(Saved <span class="hidden"
+                                id="timeSpan"></span><span>)*</span><span class="hidden" id="error">Remove
+                          cursor!</span>
+
 On average, Tachyon could benefit your site with:
 
 <div style="transform: translateX(0.33vw);">
@@ -46,18 +53,11 @@ And just when you thought it couldn't get any better...
 
 Tachyon cleverly loads pages in advance to improve the speed of your website, resulting in a better user experience and potentially even significantly more conversions. [^5] [^6] [^7] [^8] [^9]
 
-<span style="font-size:110%;"><span style="">**To test if Tachyon would've helped</span>,** <button id="confetti"><span id="clickMe" style="font-weight:bold;">click
-                            me!</span></button></span>
-                        <span class="hidden" id="no">No!</span> <span class="hidden" id="yes">Yes!</span>
-                        <span class="hidden" id="result">*(Saved <span class="hidden"
-                                id="timeSpan"></span><span>)*</span><span class="hidden" id="error">Remove
-                          cursor!</span>
-
 In the above demo, the time "saved" refers to time that would have been wasted watching the next page load without Tachyon.
 
 ## Using Tachyon
 
-<span id="copyText" style="inline-size: min-content;overflow-wrap: break-word;">`<script src="https://unpkg.com/tachyonjs@1.1.1/tachyon.min.js" integrity="sha384-eAVplf5NYzHCSEB5NSZ5vabWAMYIb9Y2E4SKcU78UTIjukDs0tMxFQX0FLmBVYi8" type="module" crossorigin defer></script>`</span>
+<span id="copyText" style="inline-size: min-content;overflow-wrap: break-word;">`<script src="https://unpkg.com/tachyonjs@2.0.0/tachyon.min.js" integrity="sha384-w8efYzZSanBkhmSezV71UPT1uzvN9Ecr4ehP5gizbGl1esC0V/+2w7lqiT6FkUOe" type="module" crossorigin defer></script>`</span>
 
 <div style="text-align:right;">
 <button id="copier">
@@ -113,10 +113,10 @@ Tachyon could be considered an alternative to projects like [instant.page](https
   </tr>
   <tr>
     <td>Size</td>
-    <td><b>698 b</b></td>
-    <td>2.88 kb<br>(4.1x larger)</td>
-    <td>60.1 kb<br>(86x larger)</td>
-    <td>111 kb<br>(159x larger)</td>
+    <td><b>723 b</b></td>
+    <td>3.14 kb<br>(4.3x larger)</td>
+    <td>60.1 kb<br>(83x larger)</td>
+    <td>111 kb<br>(153x larger)</td>
   </tr>
  <tr>
     <td>Bandwidth<br>Overhead</td>
@@ -129,7 +129,7 @@ Tachyon could be considered an alternative to projects like [instant.page](https
     <td>Prerendering<br>(Fastest Loads)</td>
     <td>✅</td>
     <td>❌</td>
-    <td>~</td>
+    <td>✅</td>
     <td>❌</td>
 </tr>
 
@@ -193,27 +193,13 @@ Tachyon's configuration features are toggled on with `data-tachyon-*` attributes
 
 ### Custom Timing
 
-If you're able to determine that the 50ms default timing is not optimal for your site, you can change it by adding the `data-tachyon-timer` attribute to website's `<body>` tag. This attribute takes an integer (in milliseconds) that will alter the script's behavior as such, i.e. if you want to set the timing to 100ms, your body tag should emulate the following example:
+If you're able to determine that the 50ms default timing is not optimal for your site, you can change it by adding the `data-tachyon-timer` attribute to website's `<body>` tag. This attribute takes an integer (in milliseconds) that will alter the script's behavior as such, i.e. if you want to set the timing to 100ms, your body tag should look like the following:
 
 ```html
 <body data-tachyon-timer="100">
     ...
 </body>
 ```
-
-### Same-Origin Only
-
-By default, Tachyon will preload content from ***any domain***. If you want Tachyon to only preload content from the same domain, you can add `data-tachyon-same-origin` to the `<body>` tag.
-
-```html
-<body data-tachyon-same-origin>
-    <a href="https://mywebsite.com/cart.php">This will load!</a>
-    <a href="https://mywebsite.com/info.php">This one too!</a>
-    <a href="https://some.otherwebsite.com">❌❌❌</a>
-</body>
-```
-
-The above example assumes your domain is `mywebsite.com`.
 
 ### Blacklist
 
@@ -240,6 +226,21 @@ In the following example the second `<a>` tag will be ignored by Tachyon and wil
     <a href="https://example.com">Not on the list! ❌❌❌</a>
 </body>
 ```
+
+### Same-Origin Only
+
+By default, Tachyon will preload content from ***any domain***. If you want Tachyon to only preload content from the same domain, you can add `data-tachyon-same-origin` to the `<body>` tag. **Enabling this will also enable the [Whitelist](#whitelist).** That means you can choose to preload links outside of your website as needed using the `data-tachyon` attribute.
+
+```html
+<body data-tachyon-same-origin>
+    <a href="https://mywebsite.com/cart.php">This will load!</a>
+    <a href="https://mywebsite.com/info.php">This one too!</a>
+    <a href="https://some.otherwebsite.com">❌❌❌</a>
+    <a href="https://shop.store.com" data-tachyon>This also loads!</a>
+</body>
+```
+
+The above example assumes your domain is `mywebsite.com`.
 
 ## Tachyon's Philosophy
 

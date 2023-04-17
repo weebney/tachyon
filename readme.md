@@ -28,42 +28,42 @@ Easy Setup Instructions:
   </tr>
   <tr>
     <td>Size</td>
-    <td><b>707 b</b></td>
-    <td>2.88 kb<br>(4.1x larger)</td>
-    <td>60.1 kb<br>(86x larger)</td>
-    <td>111 kb<br>(159x larger)</td>
+    <td><b>723 b</b></td>
+    <td>3.14 kb<br>(4.3x larger)</td>
+    <td>60.1 kb<br>(83x larger)</td>
+    <td>111 kb<br>(153x larger)</td>
   </tr>
  <tr>
-    <td>Bandwidth Overhead</td>
+    <td>Bandwidth<br>Overhead</td>
     <td><b>Lowest</b></td>
     <td>Low</td>
     <td>Highest</td>
     <td>High</td>
 </tr>
   <tr>
-    <td>Prerendering (Fastest Loads)</td>
+    <td>Prerendering<br>(Fastest Loads)</td>
     <td>✅</td>
     <td>❌</td>
-    <td>~</td>
+    <td>✅</td>
     <td>❌</td>
 </tr>
 
   <tr>
-    <td>No Addl. Code Required</td>
+    <td>No Coding<br>Required</td>
     <td>✅</td>
     <td>✅</td>
     <td>❌</td>
     <td>❌</td>
 </tr>
   <tr>
-    <td>Works on ALL links</td>
+    <td>Works on<br>ALL links</td>
     <td>✅</td>
     <td>❌</td>
     <td>❌</td>
     <td>❌</td>
 </tr>
   <tr>
-    <td>Whitelist & Blacklist</td>
+    <td>Whitelist &<br>Blacklist</td>
     <td>✅</td>
     <td>❌</td>
     <td>❌</td>
@@ -75,7 +75,7 @@ Easy Setup Instructions:
 Using Tachyon is unbelieveably easy. If you're not using node, you can just include it via script tags. Provided below is the script hosted by [unpkg](https://unpkg.com/). The source itself lives in the [tachyon directory](https://github.com/weebney/tachyon/tree/main/tachyon).
 
 ```html
-<script src="https://unpkg.com/tachyonjs@1.1.3/tachyon.min.js" integrity="sha384-V5UK6PaMtG5fx05ToAClLlgsvoCVR0KpFYIGKcdw95yKQwRpKnOISeAXVK9EQG/V" type="module" crossorigin defer></script>
+<script src="https://unpkg.com/tachyonjs@2.0.0/tachyon.min.js" integrity="sha384-w8efYzZSanBkhmSezV71UPT1uzvN9Ecr4ehP5gizbGl1esC0V/+2w7lqiT6FkUOe" type="module" crossorigin defer></script>
 ```
 
 If you look on the website, there are also easy install instructions for [Google Tag Manager](https://fasterthanlight.net/#easy-setup-instructions), [Shopify](https://fasterthanlight.net/#easy-setup-instructions), [WordPress](https://fasterthanlight.net/#easy-setup-instructions), and more.
@@ -91,7 +91,7 @@ npm i tachyonjs
 Tachyon is super tiny, so you can also inline it. If you use the following inlined `<script>` tags, you are waived from the legal requirement to include a copy of the license.
 
 ```html
-<script type="module" defer>/* tachyon 1.1.3 */var e=document.body.dataset;const o="tachyonWhitelist"in e,n="tachyonSameOrigin"in e,a=e.tachyonTimer||50;let r=null;function i(){r=r?null:this;const t="tachyon";var e=document.getElementById(t);e?e.remove():setTimeout(()=>{var e;r===this&&((e=document.createElement("link")).id=t,e.href=this.href,e.rel="prerender",document.head.appendChild(e))},a)}function t(t){"A"!==t.tagName||!t.href||"tachyon"in t.dataset!=o||n&&t.origin!==window.location.origin||["mouseover","mouseout","touchstart","touchend"].forEach(e=>t.addEventListener(e,i,{passive:!0}))}new MutationObserver(e=>e.forEach(e=>e.addedNodes.forEach(t))).observe(document.body,{childList:!0,subtree:!0}),document.querySelectorAll("a").forEach(t);</script>
+<script type="module" defer>/* tachyon 2.0.0 */var e=document.body.dataset;const o="tachyonWhitelist"in e,n="tachyonSameOrigin"in e,a=e.tachyonTimer||50;let r=null;function i(){r=r?null:this;const t="tachyon";var e=document.getElementById(t);e?e.remove():setTimeout(()=>{var e;r===this&&((e=document.createElement("link")).id=t,e.href=this.href,e.rel="prerender",document.head.appendChild(e))},a)}function t(t){var e="tachyon"in t.dataset;"A"!==t.tagName||!t.href||e!=o&&!n||n&&!e&&t.origin!==window.location.origin||["mouseover","mouseout","touchstart","touchend"].forEach(e=>t.addEventListener(e,i,{passive:!0}))}new MutationObserver(e=>e.forEach(e=>e.addedNodes.forEach(t))).observe(document.body,{childList:!0,subtree:!0}),document.querySelectorAll("a").forEach(t);</script>
 ```
 
 ### Configuration
