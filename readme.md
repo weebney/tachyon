@@ -99,9 +99,9 @@ Tachyon is super tiny, so you can also inline it. If you use the following inlin
 Tachyon implements the following using `data-tachyon-*` attributes:
 
 - [Custom Timing](https://fasterthanlight.net/#custom-timing)
-- [Same-Origin Only](https://fasterthanlight.net/#same-origin-only)
 - [Whitelist](https://fasterthanlight.net/#whitelist)
 - [Blacklist](https://fasterthanlight.net/#blacklist)
+- [Same-Origin Only](https://fasterthanlight.net/#same-origin-only) *(Breaking changes in 2.0.0)*
 
 ## Issues
 
