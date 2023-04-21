@@ -49,7 +49,7 @@ Easy Setup Instructions:
 </tr>
 
   <tr>
-    <td>No Coding<br>Required</td>
+    <td>No Addl.<br>Code Required</td>
     <td>✅</td>
     <td>✅</td>
     <td>❌</td>
