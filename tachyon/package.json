@@ -1,6 +1,6 @@
 {
   "name": "tachyonjs",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "Make your site faster than light in <1 minute; instant page loads in 723 bytes.",
   "main": "tachyon.js",
   "scripts": {
