@@ -3,7 +3,7 @@
 * Plugin Name: Tachyon
 * Plugin URI: https://fasterthanlight.net/
 * Description: Make your WordPress site faster than light.
-* Version: 2.0.0
+* Version: 2.0.1
 * Author: weebney
 * Author URI: https://github.com/weebney
 * License: MIT
