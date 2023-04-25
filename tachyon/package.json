@@ -5,7 +5,7 @@
   "main": "tachyon.js",
   "scripts": {
     "minify": "uglifyjs -c -m --module --verbose tachyon.js > tachyon.min.js",
-    "test": "http-server test/ && rm test/tachyon.js"
+    "test": "cp tachyon.js test/ && http-server test/ && rm test/tachyon.js"
   },
   "repository": {
     "type": "git",
