@@ -1,4 +1,4 @@
 # Tachyon
-## Make your site faster than light in <1 minute; instant page loads in 723 bytes.
+## Make your site faster than light in <1 minute; instant page loads in 738 bytes.
 
 **For documentation related to Tachyon, please reference the [website](https://fasterthanlight.net/) and [github repository](https://github.com/weebney/tachyon).**

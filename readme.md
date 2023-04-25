@@ -28,7 +28,7 @@ Easy Setup Instructions:
   </tr>
   <tr>
     <td>Size</td>
-    <td><b>723 b</b></td>
+    <td><b>738 b</b></td>
     <td>3.14 kb<br>(4.3x larger)</td>
     <td>60.1 kb<br>(83x larger)</td>
     <td>111 kb<br>(153x larger)</td>
@@ -75,7 +75,7 @@ Easy Setup Instructions:
 Using Tachyon is unbelieveably easy. If you're not using node, you can just include it via script tags. Provided below is the script hosted by [unpkg](https://unpkg.com/). The source itself lives in the [tachyon directory](https://github.com/weebney/tachyon/tree/main/tachyon).
 
 ```html
-<script src="https://unpkg.com/tachyonjs@2.0.0/tachyon.min.js" integrity="sha384-w8efYzZSanBkhmSezV71UPT1uzvN9Ecr4ehP5gizbGl1esC0V/+2w7lqiT6FkUOe" type="module" crossorigin defer></script>
+<script src="https://unpkg.com/tachyonjs@2.0.1/tachyon.min.js" integrity="sha384-4iJteL1FYnj4Ju83AJvNthpx5gZ1QaXCamXhY3lxhAjTNXUN+NXq5LQV/fXOSRme" type="module" crossorigin defer></script>
 ```
 
 If you look on the website, there are also easy install instructions for [Google Tag Manager](https://fasterthanlight.net/#easy-setup-instructions), [Shopify](https://fasterthanlight.net/#easy-setup-instructions), [WordPress](https://fasterthanlight.net/#easy-setup-instructions), and more.
@@ -91,7 +91,8 @@ npm i tachyonjs
 Tachyon is super tiny, so you can also inline it. If you use the following inlined `<script>` tags, you are waived from the legal requirement to include a copy of the license.
 
 ```html
-<script type="module" defer>/* tachyon 2.0.0 */var e=document.body.dataset;const o="tachyonWhitelist"in e,n="tachyonSameOrigin"in e,a=e.tachyonTimer||50;let r=null;function i(){r=r?null:this;const t="tachyon";var e=document.getElementById(t);e?e.remove():setTimeout(()=>{var e;r===this&&((e=document.createElement("link")).id=t,e.href=this.href,e.rel="prerender",document.head.appendChild(e))},a)}function t(t){var e="tachyon"in t.dataset;"A"!==t.tagName||!t.href||e!=o&&!n||n&&!e&&t.origin!==window.location.origin||["mouseover","mouseout","touchstart","touchend"].forEach(e=>t.addEventListener(e,i,{passive:!0}))}new MutationObserver(e=>e.forEach(e=>e.addedNodes.forEach(t))).observe(document.body,{childList:!0,subtree:!0}),document.querySelectorAll("a").forEach(t);</script>
+<script type="module" defer>/* tachyon 2.0.1 */var e=document.body.dataset;const o="tachyonWhitelist"in e,n="tachyonSameOrigin"in e,a=e.tachyonTimer||50;let r=null;function i(){r=r?null:this;const t="tachyon";var e=document.getElementById(t);e?e.remove():setTimeout(()=>{var e;r===this&&((e=document.createElement("link")).id=t,e.href=this.href,e.rel="prerender",document.head.appendChild(e))},a)}function t(t){var e;t.dataset&&(e="tachyon"in t.dataset,"A"!==t.tagName||!t.href||e!=o&&!n||n&&!e&&t.origin!==window.location.origin||["mouseover","mouseout","touchstart","touchend"].forEach(e=>t.addEventListener(e,i,{passive:!0})))}new MutationObserver(e=>e.forEach(e=>e.addedNodes.forEach(t))).observe(document.body,{childList:!0,subtree:!0}),document.querySelectorAll("a").forEach(t);
+</script>
 ```
 
 ### Configuration

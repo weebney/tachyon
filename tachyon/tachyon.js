@@ -1,4 +1,4 @@
-// tachyon.js 2.0.0 - @weebney - MIT License
+// tachyon.js 2.0.1 - @weebney - MIT License
 const bodyDataValues = document.body.dataset;
 const whitelistEnabled = 'tachyonWhitelist' in bodyDataValues;
 const sameOriginOnly = 'tachyonSameOrigin' in bodyDataValues;
@@ -25,10 +25,12 @@ function toggleLinkTag() {
 }
 
 function initializeListeners(node) {
-  const listed = 'tachyon' in node.dataset;
-  if ((node.tagName === 'A' && node.href) && (listed === whitelistEnabled || sameOriginOnly)
-  && (!sameOriginOnly || (listed || (node.origin === window.location.origin)))) {
-    ['mouseover', 'mouseout', 'touchstart', 'touchend'].forEach((eventName) => node.addEventListener(eventName, toggleLinkTag, { passive: true }));
+  if (node.dataset) {
+    const listed = 'tachyon' in node.dataset;
+    if ((node.tagName === 'A' && node.href) && (listed === whitelistEnabled || sameOriginOnly)
+    && (!sameOriginOnly || (listed || (node.origin === window.location.origin)))) {
+      ['mouseover', 'mouseout', 'touchstart', 'touchend'].forEach((eventName) => node.addEventListener(eventName, toggleLinkTag, { passive: true }));
+    }
   }
 }
 
