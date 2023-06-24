@@ -1,4 +1,17 @@
+<div align="center">
+<img src="docs/content/tachyon-white.svg">
+
 # Tachyon
+
+<strong>
+<samp>
+
+[English](readme.md) · [简体中文](localized/readme.zh-CN.md) · [繁體中文](localized/readme.zh-TW.md) · [한국어](localized/readme.ko.md)
+
+</samp>
+</strong>
+</div>
+
 
 Tachyon is a byte sized script that makes your website feel blazingly fast. It does this by prerendering pages before a user navigates to them, making page transitions virtually instant.
 
@@ -72,26 +85,27 @@ Easy Setup Instructions:
 </table> 
 
 ## Using Tachyon
-Using Tachyon is unbelieveably easy. If you're not using node, you can just include it via script tags. Provided below is the script hosted by [unpkg](https://unpkg.com/). The source itself lives in the [tachyon directory](https://github.com/weebney/tachyon/tree/main/tachyon).
+
+Using Tachyon is unbelieveably easy; it's super tiny, so you can just inline it. All you have to do is copy the `<script></script>` tags below and put them somewhere on your site.
 
 ```html
-<script src="https://unpkg.com/tachyonjs@2.0.1/tachyon.min.js" integrity="sha384-4iJteL1FYnj4Ju83AJvNthpx5gZ1QaXCamXhY3lxhAjTNXUN+NXq5LQV/fXOSRme" type="module" crossorigin defer></script>
+<script type="module" defer>/* tachyon 2.0.1 */var e=document.body.dataset;const o="tachyonWhitelist"in e,n="tachyonSameOrigin"in e,a=e.tachyonTimer||50;let r=null;function i(){r=r?null:this;const t="tachyon";var e=document.getElementById(t);e?e.remove():setTimeout(()=>{var e;r===this&&((e=document.createElement("link")).id=t,e.href=this.href,e.rel="prerender",document.head.appendChild(e))},a)}function t(t){var e;t.dataset&&(e="tachyon"in t.dataset,"A"!==t.tagName||!t.href||e!=o&&!n||n&&!e&&t.origin!==window.location.origin||["mouseover","mouseout","touchstart","touchend"].forEach(e=>t.addEventListener(e,i,{passive:!0})))}new MutationObserver(e=>e.forEach(e=>e.addedNodes.forEach(t))).observe(document.body,{childList:!0,subtree:!0}),document.querySelectorAll("a").forEach(t);</script>
 ```
+
+Et voila! Your website is now faster than light!
 
 If you look on the website, there are also easy install instructions for [Google Tag Manager](https://fasterthanlight.net/#easy-setup-instructions), [Shopify](https://fasterthanlight.net/#easy-setup-instructions), [WordPress](https://fasterthanlight.net/#easy-setup-instructions), and more.
 
-### Node
+Tachyon is also available via npm as `tachyonjs`.
 
 ```sh
 npm i tachyonjs
 ```
 
-### Inline
-
-Tachyon is super tiny, so you can also inline it. If you use the following inlined `<script>` tags, you are waived from the legal requirement to include a copy of the license.
+You can get also get Tachyon from any Javascript CDN—[unpkg](https://unpkg.com/browse/tachyonjs@2.0.1/) is recommended, though!
 
 ```html
-<script type="module" defer>/* tachyon 2.0.1 */var e=document.body.dataset;const o="tachyonWhitelist"in e,n="tachyonSameOrigin"in e,a=e.tachyonTimer||50;let r=null;function i(){r=r?null:this;const t="tachyon";var e=document.getElementById(t);e?e.remove():setTimeout(()=>{var e;r===this&&((e=document.createElement("link")).id=t,e.href=this.href,e.rel="prerender",document.head.appendChild(e))},a)}function t(t){var e;t.dataset&&(e="tachyon"in t.dataset,"A"!==t.tagName||!t.href||e!=o&&!n||n&&!e&&t.origin!==window.location.origin||["mouseover","mouseout","touchstart","touchend"].forEach(e=>t.addEventListener(e,i,{passive:!0})))}new MutationObserver(e=>e.forEach(e=>e.addedNodes.forEach(t))).observe(document.body,{childList:!0,subtree:!0}),document.querySelectorAll("a").forEach(t);</script>
+<script src="https://unpkg.com/tachyonjs@2.0.1/tachyon.min.js" integrity="sha384-4iJteL1FYnj4Ju83AJvNthpx5gZ1QaXCamXhY3lxhAjTNXUN+NXq5LQV/fXOSRme" type="module" crossorigin defer></script>
 ```
 
 ### Configuration
@@ -105,14 +119,14 @@ Tachyon implements the following using `data-tachyon-*` attributes:
 
 ## Issues
 
-This project follows [jordansissel](https://github.com/jordansissel)'s issue guidelines:
+Tachyon subscribes to the following philosophy:
 
 - If this project is not helping you, then there is a bug
-- If you are having a bad time with this project, then there is a bug
-- If the documentation is confusing, then this is a bug
+- If you are having a bad time using this project, then there is a bug
+- If the documentation is confusing, then the documentation is buggy
 - If there is a bug in this project, then we can work together to fix it.
 
-There is a [list of known issues](https://fasterthanlight.net/#known-issues) on the website- if anything else comes up, though, please do [open an issue](https://github.com/weebney/tachyon/issues/new) in the [issue tracker](https://github.com/weebney/tachyon/issues/).
+There is a [list of known issues](https://fasterthanlight.net/#known-issues) on the website—if anything else comes up, though, please do [open an issue](https://github.com/weebney/tachyon/issues/) in the [issue tracker](https://github.com/weebney/tachyon/issues/).
 
 ## Cheers To
 
