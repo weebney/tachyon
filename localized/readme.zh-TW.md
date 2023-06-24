@@ -8,7 +8,6 @@
 <img src="../docs/content/tachyon-white.svg">
 
 
-
 # Tachyon
 
 <strong>

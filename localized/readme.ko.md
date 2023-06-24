@@ -5,10 +5,8 @@
 >감사합니다!
 
 <div align="center">
-
 <img src="../docs/content/tachyon-white.svg">
-
-
+  
 # Tachyon
 
 <strong>

@@ -8,7 +8,6 @@
 <div align="center">
 <img src="../docs/content/tachyon-white.svg">
 
-
 # Tachyon
 
 <strong>
