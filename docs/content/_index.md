@@ -13,6 +13,17 @@ draft: false
 
 <h1 style="text-align: center;">Tachyon</h1>
 
+<div align="center">
+<strong>
+<samp>
+
+[English](https://fasterthanlight.net/) · [简体中文](https://github.com/weebney/tachyon/blob/main/localized/readme.zh-CN.md) · [繁體中文](https://github.com/weebney/tachyon/blob/main/localized/readme.zh-TW.md) · [한국어](https://github.com/weebney/tachyon/blob/main/localized/readme.ko.md)
+
+</samp>
+</strong>
+</div>
+
+
 Tachyon is a byte-sized script that improves the user experience of your website by making navigation between pages significantly quicker.
 
 <span style="font-size:110%;"><span style="">**To test if Tachyon would've helped</span>,** <button id="confetti"><span id="clickMe" style="font-weight:bold;">click
