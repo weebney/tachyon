@@ -102,7 +102,7 @@ Tachyon is also available via npm as `tachyonjs`.
 npm i tachyonjs
 ```
 
-You can get also get Tachyon from any Javascript CDN—[unpkg](https://unpkg.com/browse/tachyonjs@2.0.1/) is recommended, though!
+You can also get Tachyon from any Javascript CDN—[unpkg](https://unpkg.com/browse/tachyonjs@2.0.1/) is recommended, though!
 
 ```html
 <script src="https://unpkg.com/tachyonjs@2.0.1/tachyon.min.js" integrity="sha384-4iJteL1FYnj4Ju83AJvNthpx5gZ1QaXCamXhY3lxhAjTNXUN+NXq5LQV/fXOSRme" type="module" crossorigin defer></script>
