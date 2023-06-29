@@ -13,7 +13,7 @@
 <strong>
 <samp>
 
-[English](readme.md) · [简体中文](localized/readme.zh-CN.md) · [繁體中文](localized/readme.zh-TW.md) · [한국어](localized/readme.ko.md)
+[English](../readme.md) · [简体中文](./readme.zh-CN.md) · [繁體中文](./readme.zh-TW.md) · [한국어](./readme.ko.md)
 
 </samp>
 </strong>
