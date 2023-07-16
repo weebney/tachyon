@@ -15,11 +15,11 @@ draft: false
 
 <div align="center">
 <strong>
-<samp>
+<p>
 
-[English](https://fasterthanlight.net/) · [简体中文](https://github.com/weebney/tachyon/blob/main/localized/readme.zh-CN.md) · [繁體中文](https://github.com/weebney/tachyon/blob/main/localized/readme.zh-TW.md) · [한국어](https://github.com/weebney/tachyon/blob/main/localized/readme.ko.md)
+[GitHub](https://github.com/weebney/tachyon/) · [简体中文](https://github.com/weebney/tachyon/blob/main/localized/readme.zh-CN.md) · [繁體中文](https://github.com/weebney/tachyon/blob/main/localized/readme.zh-TW.md) · [한국어](https://github.com/weebney/tachyon/blob/main/localized/readme.ko.md)
 
-</samp>
+</p>
 </strong>
 </div>
 
