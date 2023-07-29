@@ -10,6 +10,13 @@
 
 </samp>
 </strong>
+
+<img alt="npm bundle size" src="https://img.shields.io/npm/dm/tachyonjs?color=lavender">
+<img alt="npm bundle size" src="https://img.shields.io/bundlephobia/minzip/tachyonjs">
+<img alt="GitHub last commit (by committer)" src="https://img.shields.io/github/last-commit/weebney/tachyon?color=rebeccapurple">
+
+<br>
+
 </div>
 
 
