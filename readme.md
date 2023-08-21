@@ -11,9 +11,9 @@
 </samp>
 </strong>
 
-<img alt="npm bundle size" src="https://img.shields.io/npm/dm/tachyonjs">
-<img alt="npm bundle size" src="https://img.shields.io/bundlephobia/minzip/tachyonjs">
-<img alt="GitHub last commit (by committer)" src="https://img.shields.io/github/last-commit/weebney/tachyon?color=rebeccapurple">
+[![npm downloads](https://img.shields.io/npm/dm/tachyonjs)](https://npmjs.com/package/tachyonjs)
+[![npm bundle size](https://img.shields.io/bundlephobia/minzip/tachyonjs)](https://bundlephobia.com/result?p=tachyonjs)
+[![GitHub last commit](https://img.shields.io/github/last-commit/weebney/tachyon?color=rebeccapurple)](https://github.com/weebney/tachyon/commits/master)
 
 <br>
 
