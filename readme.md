@@ -13,7 +13,7 @@
 
 [![npm downloads](https://img.shields.io/npm/dm/tachyonjs)](https://npmjs.com/package/tachyonjs)
 [![npm bundle size](https://img.shields.io/bundlephobia/minzip/tachyonjs)](https://bundlephobia.com/result?p=tachyonjs)
-[![GitHub last commit](https://img.shields.io/github/last-commit/weebney/tachyon?color=rebeccapurple)](https://github.com/weebney/tachyon/commits/master)
+[![GitHub last commit](https://img.shields.io/github/last-commit/weebney/tachyon?color=rebeccapurple)](https://github.com/weebney/tachyon/commits/main)
 
 <br>
 
