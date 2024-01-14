@@ -1,3 +1,6 @@
+> [!IMPORTANT]
+> <h3> This package has been deprecated since January 14, 2024 due to changes (previous and upcoming) to prefetch/prerender behavior. Don't use it! </h3>
+
 <div align="center">
 <img src="docs/content/tachyon-white.svg">
 
